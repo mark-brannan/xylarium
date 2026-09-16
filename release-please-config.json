@@ -21,6 +21,10 @@
           "section": "Fixed"
         },
         {
+          "type": "correct",
+          "section": "Corrected"
+        },
+        {
           "type": "perf",
           "section": "Changed"
         },
