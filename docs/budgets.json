@@ -8,6 +8,7 @@
     "SECURITY.md": 60,
     "docs/identifiers.md": 120,
     "docs/adr/0001-name-and-scope.md": 300,
+    "docs/adr/0002-corrected-value-semver.md": 130,
     "required": true,
     "pending": []
   },
