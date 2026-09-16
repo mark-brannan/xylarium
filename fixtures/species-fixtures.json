@@ -1,0 +1,951 @@
+{
+  "description": "Cross-implementation fixtures for data/species.json. Any implementation reading this package must reproduce these outputs exactly. round_trip is the transcription check: Table 5-3b (inch-pound) is the transcribed source and Table 5-3a (metric) is printed independently, so converting a 5-3b cell must land within 5-3a's printed rounding.",
+  "conversion": {
+    "note": "Each data/species.json property, the 5-3a field it converts to, the factor, and the tolerance -- half of 5-3a's printed rounding step for that column.",
+    "by_property": {
+      "specific_gravity": {
+        "metric_property": "specific_gravity",
+        "factor": 1.0,
+        "tolerance": 0.005
+      },
+      "modulus_of_rupture_psi": {
+        "metric_property": "modulus_of_rupture_kpa",
+        "factor": 6.894757,
+        "tolerance": 500
+      },
+      "modulus_of_elasticity_million_psi": {
+        "metric_property": "modulus_of_elasticity_mpa",
+        "factor": 6894.757,
+        "tolerance": 50
+      },
+      "work_to_max_load_in_lbf_per_in3": {
+        "metric_property": "work_to_max_load_kj_per_m3",
+        "factor": 6.894757,
+        "tolerance": 0.5
+      },
+      "impact_bending_in": {
+        "metric_property": "impact_bending_mm",
+        "factor": 25.4,
+        "tolerance": 5
+      },
+      "compression_parallel_psi": {
+        "metric_property": "compression_parallel_kpa",
+        "factor": 6.894757,
+        "tolerance": 50
+      },
+      "compression_perpendicular_psi": {
+        "metric_property": "compression_perpendicular_kpa",
+        "factor": 6.894757,
+        "tolerance": 50
+      },
+      "shear_parallel_psi": {
+        "metric_property": "shear_parallel_kpa",
+        "factor": 6.894757,
+        "tolerance": 50
+      },
+      "tension_perpendicular_psi": {
+        "metric_property": "tension_perpendicular_kpa",
+        "factor": 6.894757,
+        "tolerance": 50
+      },
+      "side_hardness_lbf": {
+        "metric_property": "side_hardness_n",
+        "factor": 4.448222,
+        "tolerance": 50
+      }
+    }
+  },
+  "round_trip": [
+    {
+      "species": "alder-red",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.37,
+        "modulus_of_rupture_kpa": 45000,
+        "modulus_of_elasticity_mpa": 8100,
+        "work_to_max_load_kj_per_m3": 55,
+        "impact_bending_mm": 560,
+        "compression_parallel_kpa": 20400,
+        "compression_perpendicular_kpa": 1700,
+        "shear_parallel_kpa": 5300,
+        "tension_perpendicular_kpa": 2700,
+        "side_hardness_n": 2000
+      }
+    },
+    {
+      "species": "alder-red",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.41,
+        "modulus_of_rupture_kpa": 68000,
+        "modulus_of_elasticity_mpa": 9500,
+        "work_to_max_load_kj_per_m3": 58,
+        "impact_bending_mm": 510,
+        "compression_parallel_kpa": 40100,
+        "compression_perpendicular_kpa": 3000,
+        "shear_parallel_kpa": 7400,
+        "tension_perpendicular_kpa": 2900,
+        "side_hardness_n": 2600
+      }
+    },
+    {
+      "species": "ash-green",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.53,
+        "modulus_of_rupture_kpa": 66000,
+        "modulus_of_elasticity_mpa": 9700,
+        "work_to_max_load_kj_per_m3": 81,
+        "impact_bending_mm": 890,
+        "compression_parallel_kpa": 29000,
+        "compression_perpendicular_kpa": 5000,
+        "shear_parallel_kpa": 8700,
+        "tension_perpendicular_kpa": 4100,
+        "side_hardness_n": 3900
+      }
+    },
+    {
+      "species": "ash-green",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.56,
+        "modulus_of_rupture_kpa": 97000,
+        "modulus_of_elasticity_mpa": 11400,
+        "work_to_max_load_kj_per_m3": 92,
+        "impact_bending_mm": 810,
+        "compression_parallel_kpa": 48800,
+        "compression_perpendicular_kpa": 9000,
+        "shear_parallel_kpa": 13200,
+        "tension_perpendicular_kpa": 4800,
+        "side_hardness_n": 5300
+      }
+    },
+    {
+      "species": "aspen-quaking",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.35,
+        "modulus_of_rupture_kpa": 35000,
+        "modulus_of_elasticity_mpa": 5900,
+        "work_to_max_load_kj_per_m3": 44,
+        "impact_bending_mm": 560,
+        "compression_parallel_kpa": 14800,
+        "compression_perpendicular_kpa": 1200,
+        "shear_parallel_kpa": 4600,
+        "tension_perpendicular_kpa": 1600,
+        "side_hardness_n": 1300
+      }
+    },
+    {
+      "species": "aspen-quaking",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.38,
+        "modulus_of_rupture_kpa": 58000,
+        "modulus_of_elasticity_mpa": 8100,
+        "work_to_max_load_kj_per_m3": 52,
+        "impact_bending_mm": 530,
+        "compression_parallel_kpa": 29300,
+        "compression_perpendicular_kpa": 2600,
+        "shear_parallel_kpa": 5900,
+        "tension_perpendicular_kpa": 1800,
+        "side_hardness_n": 1600
+      }
+    },
+    {
+      "species": "basswood-american",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.32,
+        "modulus_of_rupture_kpa": 34000,
+        "modulus_of_elasticity_mpa": 7200,
+        "work_to_max_load_kj_per_m3": 37,
+        "impact_bending_mm": 410,
+        "compression_parallel_kpa": 15300,
+        "compression_perpendicular_kpa": 1200,
+        "shear_parallel_kpa": 4100,
+        "tension_perpendicular_kpa": 1900,
+        "side_hardness_n": 1100
+      }
+    },
+    {
+      "species": "basswood-american",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.37,
+        "modulus_of_rupture_kpa": 60000,
+        "modulus_of_elasticity_mpa": 10100,
+        "work_to_max_load_kj_per_m3": 50,
+        "impact_bending_mm": 410,
+        "compression_parallel_kpa": 32600,
+        "compression_perpendicular_kpa": 2600,
+        "shear_parallel_kpa": 6800,
+        "tension_perpendicular_kpa": 2400,
+        "side_hardness_n": 1800
+      }
+    },
+    {
+      "species": "beech-american",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.56,
+        "modulus_of_rupture_kpa": 59000,
+        "modulus_of_elasticity_mpa": 9500,
+        "work_to_max_load_kj_per_m3": 82,
+        "impact_bending_mm": 1090,
+        "compression_parallel_kpa": 24500,
+        "compression_perpendicular_kpa": 3700,
+        "shear_parallel_kpa": 8900,
+        "tension_perpendicular_kpa": 5000,
+        "side_hardness_n": 3800
+      }
+    },
+    {
+      "species": "beech-american",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.64,
+        "modulus_of_rupture_kpa": 103000,
+        "modulus_of_elasticity_mpa": 11900,
+        "work_to_max_load_kj_per_m3": 104,
+        "impact_bending_mm": 1040,
+        "compression_parallel_kpa": 50300,
+        "compression_perpendicular_kpa": 7000,
+        "shear_parallel_kpa": 13900,
+        "tension_perpendicular_kpa": 7000,
+        "side_hardness_n": 5800
+      }
+    },
+    {
+      "species": "birch-paper",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.48,
+        "modulus_of_rupture_kpa": 44000,
+        "modulus_of_elasticity_mpa": 8100,
+        "work_to_max_load_kj_per_m3": 112,
+        "impact_bending_mm": 1240,
+        "compression_parallel_kpa": 16300,
+        "compression_perpendicular_kpa": 1900,
+        "shear_parallel_kpa": 5800,
+        "tension_perpendicular_kpa": 2600,
+        "side_hardness_n": 2500
+      }
+    },
+    {
+      "species": "birch-paper",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.55,
+        "modulus_of_rupture_kpa": 85000,
+        "modulus_of_elasticity_mpa": 11000,
+        "work_to_max_load_kj_per_m3": 110,
+        "impact_bending_mm": 860,
+        "compression_parallel_kpa": 39200,
+        "compression_perpendicular_kpa": 4100,
+        "shear_parallel_kpa": 8300,
+        "tension_perpendicular_kpa": null,
+        "side_hardness_n": 4000
+      }
+    },
+    {
+      "species": "cherry-black",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.47,
+        "modulus_of_rupture_kpa": 55000,
+        "modulus_of_elasticity_mpa": 9000,
+        "work_to_max_load_kj_per_m3": 88,
+        "impact_bending_mm": 840,
+        "compression_parallel_kpa": 24400,
+        "compression_perpendicular_kpa": 2500,
+        "shear_parallel_kpa": 7800,
+        "tension_perpendicular_kpa": 3900,
+        "side_hardness_n": 2900
+      }
+    },
+    {
+      "species": "cherry-black",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.5,
+        "modulus_of_rupture_kpa": 85000,
+        "modulus_of_elasticity_mpa": 10300,
+        "work_to_max_load_kj_per_m3": 79,
+        "impact_bending_mm": 740,
+        "compression_parallel_kpa": 49000,
+        "compression_perpendicular_kpa": 4800,
+        "shear_parallel_kpa": 11700,
+        "tension_perpendicular_kpa": 3900,
+        "side_hardness_n": 4200
+      }
+    },
+    {
+      "species": "elm-american",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.46,
+        "modulus_of_rupture_kpa": 50000,
+        "modulus_of_elasticity_mpa": 7700,
+        "work_to_max_load_kj_per_m3": 81,
+        "impact_bending_mm": 970,
+        "compression_parallel_kpa": 20100,
+        "compression_perpendicular_kpa": 2500,
+        "shear_parallel_kpa": 6900,
+        "tension_perpendicular_kpa": 4100,
+        "side_hardness_n": 2800
+      }
+    },
+    {
+      "species": "elm-american",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.5,
+        "modulus_of_rupture_kpa": 81000,
+        "modulus_of_elasticity_mpa": 9200,
+        "work_to_max_load_kj_per_m3": 90,
+        "impact_bending_mm": 990,
+        "compression_parallel_kpa": 38100,
+        "compression_perpendicular_kpa": 4800,
+        "shear_parallel_kpa": 10400,
+        "tension_perpendicular_kpa": 4600,
+        "side_hardness_n": 3700
+      }
+    },
+    {
+      "species": "hickory-true-shagbark",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.64,
+        "modulus_of_rupture_kpa": 76000,
+        "modulus_of_elasticity_mpa": 10800,
+        "work_to_max_load_kj_per_m3": 163,
+        "impact_bending_mm": 1880,
+        "compression_parallel_kpa": 31600,
+        "compression_perpendicular_kpa": 5800,
+        "shear_parallel_kpa": 10500,
+        "tension_perpendicular_kpa": null,
+        "side_hardness_n": 6500
+      }
+    },
+    {
+      "species": "hickory-true-shagbark",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.72,
+        "modulus_of_rupture_kpa": 139000,
+        "modulus_of_elasticity_mpa": 14900,
+        "work_to_max_load_kj_per_m3": 178,
+        "impact_bending_mm": 1700,
+        "compression_parallel_kpa": 63500,
+        "compression_perpendicular_kpa": 12100,
+        "shear_parallel_kpa": 16800,
+        "tension_perpendicular_kpa": null,
+        "side_hardness_n": 8400
+      }
+    },
+    {
+      "species": "maple-sugar",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.56,
+        "modulus_of_rupture_kpa": 65000,
+        "modulus_of_elasticity_mpa": 10700,
+        "work_to_max_load_kj_per_m3": 92,
+        "impact_bending_mm": 1020,
+        "compression_parallel_kpa": 27700,
+        "compression_perpendicular_kpa": 4400,
+        "shear_parallel_kpa": 10100,
+        "tension_perpendicular_kpa": null,
+        "side_hardness_n": 4300
+      }
+    },
+    {
+      "species": "maple-sugar",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.63,
+        "modulus_of_rupture_kpa": 109000,
+        "modulus_of_elasticity_mpa": 12600,
+        "work_to_max_load_kj_per_m3": 114,
+        "impact_bending_mm": 990,
+        "compression_parallel_kpa": 54000,
+        "compression_perpendicular_kpa": 10100,
+        "shear_parallel_kpa": 16100,
+        "tension_perpendicular_kpa": null,
+        "side_hardness_n": 6400
+      }
+    },
+    {
+      "species": "oak-red-northern-red",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.56,
+        "modulus_of_rupture_kpa": 57000,
+        "modulus_of_elasticity_mpa": 9300,
+        "work_to_max_load_kj_per_m3": 91,
+        "impact_bending_mm": 1120,
+        "compression_parallel_kpa": 23700,
+        "compression_perpendicular_kpa": 4200,
+        "shear_parallel_kpa": 8300,
+        "tension_perpendicular_kpa": 5200,
+        "side_hardness_n": 4400
+      }
+    },
+    {
+      "species": "oak-red-northern-red",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.63,
+        "modulus_of_rupture_kpa": 99000,
+        "modulus_of_elasticity_mpa": 12500,
+        "work_to_max_load_kj_per_m3": 100,
+        "impact_bending_mm": 1090,
+        "compression_parallel_kpa": 46600,
+        "compression_perpendicular_kpa": 7000,
+        "shear_parallel_kpa": 12300,
+        "tension_perpendicular_kpa": 5500,
+        "side_hardness_n": 5700
+      }
+    },
+    {
+      "species": "oak-white-white",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.6,
+        "modulus_of_rupture_kpa": 57000,
+        "modulus_of_elasticity_mpa": 8600,
+        "work_to_max_load_kj_per_m3": 80,
+        "impact_bending_mm": 1070,
+        "compression_parallel_kpa": 24500,
+        "compression_perpendicular_kpa": 4600,
+        "shear_parallel_kpa": 8600,
+        "tension_perpendicular_kpa": 5300,
+        "side_hardness_n": 4700
+      }
+    },
+    {
+      "species": "oak-white-white",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.68,
+        "modulus_of_rupture_kpa": 105000,
+        "modulus_of_elasticity_mpa": 12300,
+        "work_to_max_load_kj_per_m3": 102,
+        "impact_bending_mm": 940,
+        "compression_parallel_kpa": 51300,
+        "compression_perpendicular_kpa": 7400,
+        "shear_parallel_kpa": 13800,
+        "tension_perpendicular_kpa": 5500,
+        "side_hardness_n": 6000
+      }
+    },
+    {
+      "species": "sweetgum",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.46,
+        "modulus_of_rupture_kpa": 49000,
+        "modulus_of_elasticity_mpa": 8300,
+        "work_to_max_load_kj_per_m3": 70,
+        "impact_bending_mm": 910,
+        "compression_parallel_kpa": 21000,
+        "compression_perpendicular_kpa": 2600,
+        "shear_parallel_kpa": 6800,
+        "tension_perpendicular_kpa": 3700,
+        "side_hardness_n": 2700
+      }
+    },
+    {
+      "species": "sweetgum",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.52,
+        "modulus_of_rupture_kpa": 86000,
+        "modulus_of_elasticity_mpa": 11300,
+        "work_to_max_load_kj_per_m3": 82,
+        "impact_bending_mm": 810,
+        "compression_parallel_kpa": 43600,
+        "compression_perpendicular_kpa": 4300,
+        "shear_parallel_kpa": 11000,
+        "tension_perpendicular_kpa": 5200,
+        "side_hardness_n": 3800
+      }
+    },
+    {
+      "species": "yellow-poplar",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.4,
+        "modulus_of_rupture_kpa": 41000,
+        "modulus_of_elasticity_mpa": 8400,
+        "work_to_max_load_kj_per_m3": 52,
+        "impact_bending_mm": 660,
+        "compression_parallel_kpa": 18300,
+        "compression_perpendicular_kpa": 1900,
+        "shear_parallel_kpa": 5400,
+        "tension_perpendicular_kpa": 3500,
+        "side_hardness_n": 2000
+      }
+    },
+    {
+      "species": "yellow-poplar",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.42,
+        "modulus_of_rupture_kpa": 70000,
+        "modulus_of_elasticity_mpa": 10900,
+        "work_to_max_load_kj_per_m3": 61,
+        "impact_bending_mm": 610,
+        "compression_parallel_kpa": 38200,
+        "compression_perpendicular_kpa": 3400,
+        "shear_parallel_kpa": 8200,
+        "tension_perpendicular_kpa": 3700,
+        "side_hardness_n": 2400
+      }
+    },
+    {
+      "species": "baldcypress",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.42,
+        "modulus_of_rupture_kpa": 46000,
+        "modulus_of_elasticity_mpa": 8100,
+        "work_to_max_load_kj_per_m3": 46,
+        "impact_bending_mm": 640,
+        "compression_parallel_kpa": 24700,
+        "compression_perpendicular_kpa": 2800,
+        "shear_parallel_kpa": 5600,
+        "tension_perpendicular_kpa": 2100,
+        "side_hardness_n": 1700
+      }
+    },
+    {
+      "species": "baldcypress",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.46,
+        "modulus_of_rupture_kpa": 73000,
+        "modulus_of_elasticity_mpa": 9900,
+        "work_to_max_load_kj_per_m3": 57,
+        "impact_bending_mm": 610,
+        "compression_parallel_kpa": 43900,
+        "compression_perpendicular_kpa": 5000,
+        "shear_parallel_kpa": 6900,
+        "tension_perpendicular_kpa": 1900,
+        "side_hardness_n": 2300
+      }
+    },
+    {
+      "species": "douglas-fir-interior-west",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.46,
+        "modulus_of_rupture_kpa": 53000,
+        "modulus_of_elasticity_mpa": 10400,
+        "work_to_max_load_kj_per_m3": 50,
+        "impact_bending_mm": 660,
+        "compression_parallel_kpa": 26700,
+        "compression_perpendicular_kpa": 2900,
+        "shear_parallel_kpa": 6500,
+        "tension_perpendicular_kpa": 2000,
+        "side_hardness_n": 2300
+      }
+    },
+    {
+      "species": "douglas-fir-interior-west",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.5,
+        "modulus_of_rupture_kpa": 87000,
+        "modulus_of_elasticity_mpa": 12600,
+        "work_to_max_load_kj_per_m3": 73,
+        "impact_bending_mm": 810,
+        "compression_parallel_kpa": 51200,
+        "compression_perpendicular_kpa": 5200,
+        "shear_parallel_kpa": 8900,
+        "tension_perpendicular_kpa": 2400,
+        "side_hardness_n": 2900
+      }
+    },
+    {
+      "species": "fir-balsam",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.33,
+        "modulus_of_rupture_kpa": 38000,
+        "modulus_of_elasticity_mpa": 8600,
+        "work_to_max_load_kj_per_m3": 32,
+        "impact_bending_mm": 410,
+        "compression_parallel_kpa": 18100,
+        "compression_perpendicular_kpa": 1300,
+        "shear_parallel_kpa": 4600,
+        "tension_perpendicular_kpa": 1200,
+        "side_hardness_n": 1300
+      }
+    },
+    {
+      "species": "fir-balsam",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.35,
+        "modulus_of_rupture_kpa": 63000,
+        "modulus_of_elasticity_mpa": 10000,
+        "work_to_max_load_kj_per_m3": 35,
+        "impact_bending_mm": 510,
+        "compression_parallel_kpa": 36400,
+        "compression_perpendicular_kpa": 2800,
+        "shear_parallel_kpa": 6500,
+        "tension_perpendicular_kpa": 1200,
+        "side_hardness_n": 1700
+      }
+    },
+    {
+      "species": "pine-longleaf",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.54,
+        "modulus_of_rupture_kpa": 59000,
+        "modulus_of_elasticity_mpa": 11000,
+        "work_to_max_load_kj_per_m3": 61,
+        "impact_bending_mm": 890,
+        "compression_parallel_kpa": 29800,
+        "compression_perpendicular_kpa": 3300,
+        "shear_parallel_kpa": 7200,
+        "tension_perpendicular_kpa": 2300,
+        "side_hardness_n": 2600
+      }
+    },
+    {
+      "species": "pine-longleaf",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.59,
+        "modulus_of_rupture_kpa": 100000,
+        "modulus_of_elasticity_mpa": 13700,
+        "work_to_max_load_kj_per_m3": 81,
+        "impact_bending_mm": 860,
+        "compression_parallel_kpa": 58400,
+        "compression_perpendicular_kpa": 6600,
+        "shear_parallel_kpa": 10400,
+        "tension_perpendicular_kpa": 3200,
+        "side_hardness_n": 3900
+      }
+    },
+    {
+      "species": "redwood-old-growth",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.38,
+        "modulus_of_rupture_kpa": 52000,
+        "modulus_of_elasticity_mpa": 8100,
+        "work_to_max_load_kj_per_m3": 51,
+        "impact_bending_mm": 530,
+        "compression_parallel_kpa": 29000,
+        "compression_perpendicular_kpa": 2900,
+        "shear_parallel_kpa": 5500,
+        "tension_perpendicular_kpa": 1800,
+        "side_hardness_n": 1800
+      }
+    },
+    {
+      "species": "redwood-old-growth",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.4,
+        "modulus_of_rupture_kpa": 69000,
+        "modulus_of_elasticity_mpa": 9200,
+        "work_to_max_load_kj_per_m3": 48,
+        "impact_bending_mm": 480,
+        "compression_parallel_kpa": 42400,
+        "compression_perpendicular_kpa": 4800,
+        "shear_parallel_kpa": 6500,
+        "tension_perpendicular_kpa": 1700,
+        "side_hardness_n": 2100
+      }
+    },
+    {
+      "species": "spruce-sitka",
+      "moisture": "green",
+      "metric": {
+        "specific_gravity": 0.37,
+        "modulus_of_rupture_kpa": 39000,
+        "modulus_of_elasticity_mpa": 8500,
+        "work_to_max_load_kj_per_m3": 43,
+        "impact_bending_mm": 610,
+        "compression_parallel_kpa": 18400,
+        "compression_perpendicular_kpa": 1900,
+        "shear_parallel_kpa": 5200,
+        "tension_perpendicular_kpa": 1700,
+        "side_hardness_n": 1600
+      }
+    },
+    {
+      "species": "spruce-sitka",
+      "moisture": "12",
+      "metric": {
+        "specific_gravity": 0.4,
+        "modulus_of_rupture_kpa": 70000,
+        "modulus_of_elasticity_mpa": 10800,
+        "work_to_max_load_kj_per_m3": 65,
+        "impact_bending_mm": 640,
+        "compression_parallel_kpa": 38700,
+        "compression_perpendicular_kpa": 4000,
+        "shear_parallel_kpa": 7900,
+        "tension_perpendicular_kpa": 2600,
+        "side_hardness_n": 2300
+      }
+    }
+  ],
+  "lookup": [
+    {
+      "species": "oak-white-white",
+      "moisture": "12",
+      "property": "modulus_of_rupture_psi",
+      "value": 15200
+    },
+    {
+      "species": "oak-white-white",
+      "moisture": "green",
+      "property": "specific_gravity",
+      "value": 0.6
+    },
+    {
+      "species": "douglas-fir-coast",
+      "moisture": "12",
+      "property": "modulus_of_elasticity_million_psi",
+      "value": 1.95
+    },
+    {
+      "species": "pine-longleaf",
+      "moisture": "green",
+      "property": "compression_parallel_psi",
+      "value": 4320
+    },
+    {
+      "species": "hickory-true-pignut",
+      "moisture": "12",
+      "property": "side_hardness_lbf",
+      "value": 2140
+    },
+    {
+      "species": "spruce-sitka",
+      "moisture": "12",
+      "property": "shear_parallel_psi",
+      "value": 1150
+    },
+    {
+      "species": "balsa",
+      "moisture": "12",
+      "property": "specific_gravity",
+      "value": null,
+      "absent": true
+    },
+    {
+      "species": "tanoak",
+      "moisture": "12",
+      "property": "modulus_of_rupture_psi",
+      "value": null
+    },
+    {
+      "species": "elm-rock",
+      "moisture": "green",
+      "property": "tension_perpendicular_psi",
+      "value": null
+    },
+    {
+      "species": "willow-black",
+      "moisture": "green",
+      "property": "impact_bending_in",
+      "value": null
+    },
+    {
+      "species": "maple-sugar",
+      "moisture": "12",
+      "property": "work_to_max_load_in_lbf_per_in3",
+      "value": 16.5
+    },
+    {
+      "species": "cedar-western-redcedar",
+      "moisture": "green",
+      "property": "side_hardness_lbf",
+      "value": 260
+    }
+  ],
+  "handbook_internal_disagreements": {
+    "note": "Cells where 5-3a is not a rounding of 5-3b. 5-3b is canonical (5-3a's footnote a says it was converted from 5-3b), so data/species.json carries the 5-3b value and these rows are excluded from round_trip. Recorded, not reconciled.",
+    "cells": [
+      {
+        "species": "ash-white",
+        "moisture": "12",
+        "property": "work_to_max_load_in_lbf_per_in3",
+        "table_5_3b": 16.6,
+        "table_5_3a": 115,
+        "table_5_3b_converted": 114.5
+      },
+      {
+        "species": "birch-yellow",
+        "moisture": "green",
+        "property": "side_hardness_lbf",
+        "table_5_3b": 780,
+        "table_5_3a": 3600,
+        "table_5_3b_converted": 3469.6
+      },
+      {
+        "species": "butternut",
+        "moisture": "12",
+        "property": "compression_parallel_psi",
+        "table_5_3b": 5110,
+        "table_5_3a": 36200,
+        "table_5_3b_converted": 35232.2
+      },
+      {
+        "species": "elm-rock",
+        "moisture": "green",
+        "property": "side_hardness_lbf",
+        "table_5_3b": 940,
+        "table_5_3a": null,
+        "table_5_3b_converted": 4181.3
+      },
+      {
+        "species": "elm-rock",
+        "moisture": "12",
+        "property": "side_hardness_lbf",
+        "table_5_3b": 1320,
+        "table_5_3a": null,
+        "table_5_3b_converted": 5871.7
+      },
+      {
+        "species": "oak-white-post",
+        "moisture": "12",
+        "property": "compression_parallel_psi",
+        "table_5_3b": 6600,
+        "table_5_3a": 45300,
+        "table_5_3b_converted": 45505.4
+      },
+      {
+        "species": "cedar-eastern-redcedar",
+        "moisture": "12",
+        "property": "side_hardness_lbf",
+        "table_5_3b": null,
+        "table_5_3a": 4000,
+        "table_5_3b_converted": null
+      },
+      {
+        "species": "cedar-port-orford",
+        "moisture": "green",
+        "property": "modulus_of_rupture_psi",
+        "table_5_3b": 6600,
+        "table_5_3a": 45000,
+        "table_5_3b_converted": 45505.4
+      },
+      {
+        "species": "douglas-fir-coast",
+        "moisture": "12",
+        "property": "compression_parallel_psi",
+        "table_5_3b": 7230,
+        "table_5_3a": 49900,
+        "table_5_3b_converted": 49849.1
+      },
+      {
+        "species": "hemlock-western",
+        "moisture": "12",
+        "property": "modulus_of_elasticity_million_psi",
+        "table_5_3b": 1.63,
+        "table_5_3a": 11300,
+        "table_5_3b_converted": 11238.5
+      },
+      {
+        "species": "hemlock-western",
+        "moisture": "12",
+        "property": "compression_parallel_psi",
+        "table_5_3b": 7200,
+        "table_5_3a": 49000,
+        "table_5_3b_converted": 49642.3
+      },
+      {
+        "species": "hemlock-western",
+        "moisture": "12",
+        "property": "shear_parallel_psi",
+        "table_5_3b": 1290,
+        "table_5_3a": 8600,
+        "table_5_3b_converted": 8894.2
+      },
+      {
+        "species": "pine-pitch",
+        "moisture": "12",
+        "property": "compression_perpendicular_psi",
+        "table_5_3b": 820,
+        "table_5_3a": 5600,
+        "table_5_3b_converted": 5653.7
+      },
+      {
+        "species": "pine-red",
+        "moisture": "12",
+        "property": "shear_parallel_psi",
+        "table_5_3b": 1210,
+        "table_5_3a": 8400,
+        "table_5_3b_converted": 8342.7
+      },
+      {
+        "species": "pine-western-white",
+        "moisture": "green",
+        "property": "specific_gravity",
+        "table_5_3b": 0.35,
+        "table_5_3a": 0.36,
+        "table_5_3b_converted": 0.3
+      },
+      {
+        "species": "pine-western-white",
+        "moisture": "12",
+        "property": "specific_gravity",
+        "table_5_3b": 0.38,
+        "table_5_3a": 0.35,
+        "table_5_3b_converted": 0.4
+      },
+      {
+        "species": "redwood-young-growth",
+        "moisture": "12",
+        "property": "shear_parallel_psi",
+        "table_5_3b": 1110,
+        "table_5_3a": 7600,
+        "table_5_3b_converted": 7653.2
+      },
+      {
+        "species": "spruce-engelmann",
+        "moisture": "12",
+        "property": "modulus_of_elasticity_million_psi",
+        "table_5_3b": 1.3,
+        "table_5_3a": 8900,
+        "table_5_3b_converted": 8963.2
+      },
+      {
+        "species": "spruce-red",
+        "moisture": "green",
+        "property": "side_hardness_lbf",
+        "table_5_3b": 340,
+        "table_5_3a": 1600,
+        "table_5_3b_converted": 1512.4
+      },
+      {
+        "species": "spruce-red",
+        "moisture": "12",
+        "property": "side_hardness_lbf",
+        "table_5_3b": 530,
+        "table_5_3a": 2200,
+        "table_5_3b_converted": 2357.6
+      },
+      {
+        "species": "spruce-white",
+        "moisture": "12",
+        "property": "modulus_of_elasticity_million_psi",
+        "table_5_3b": 1.43,
+        "table_5_3a": 9600,
+        "table_5_3b_converted": 9859.5
+      }
+    ]
+  },
+  "derived": {
+    "note": "Specific gravity to density is deferred: it needs the chapter 4 relation, and chapter 4 is not yet transcribed."
+  }
+}

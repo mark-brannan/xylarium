@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mark-brannan/xylarium/schema/species.schema.json",
+  "title": "Wood Handbook species mechanical properties",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["provenance", "units", "species"],
+  "properties": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instrument", "chapter", "tables", "url", "rights", "transcribed"],
+      "properties": {
+        "instrument": { "type": "string" },
+        "chapter": { "type": "string" },
+        "tables": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "oracle_tables": { "type": "array", "items": { "type": "string" } },
+        "url": { "type": "string", "format": "uri" },
+        "rights": { "type": "string" },
+        "transcribed": { "type": ["string", "null"] },
+        "scope": { "type": "string" },
+        "scientific_names": { "type": "string" }
+      }
+    },
+    "units": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "required": ["specific_gravity", "moisture", "stress", "modulus", "work", "impact", "hardness"]
+    },
+    "species": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "$ref": "#/$defs/speciesId" },
+      "additionalProperties": { "$ref": "#/$defs/species" }
+    }
+  },
+  "$defs": {
+    "speciesId": {
+      "description": "Opaque slug, minted once from the Table 5-3 row label and never re-derived or parsed. See docs/identifiers.md.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "species": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["handbook_label", "scientific_name", "group", "origin", "properties"],
+      "properties": {
+        "handbook_label": {
+          "description": "The row label as the Handbook prints it, group heading first.",
+          "type": "string",
+          "minLength": 1
+        },
+        "scientific_name": {
+          "description": "Binomial. Null where no cited source has supplied one; Table 5-3 prints none.",
+          "type": ["string", "null"]
+        },
+        "group": { "enum": ["hardwood", "softwood"] },
+        "origin": { "enum": ["us", "imported"] },
+        "note": { "type": "string" },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["green", "12"],
+          "properties": {
+            "green": { "$ref": "#/$defs/propertySet" },
+            "12": { "$ref": "#/$defs/propertySet" }
+          }
+        }
+      }
+    },
+    "propertySet": {
+      "description": "One moisture state. Every key is present; null means the Handbook cell is a dash.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "specific_gravity",
+        "modulus_of_rupture_psi",
+        "modulus_of_elasticity_million_psi",
+        "work_to_max_load_in_lbf_per_in3",
+        "impact_bending_in",
+        "compression_parallel_psi",
+        "compression_perpendicular_psi",
+        "shear_parallel_psi",
+        "tension_perpendicular_psi",
+        "side_hardness_lbf"
+      ],
+      "properties": {
+        "specific_gravity": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "specific_gravity_note": { "type": "string" },
+        "modulus_of_rupture_psi": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "modulus_of_rupture_psi_note": { "type": "string" },
+        "modulus_of_elasticity_million_psi": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "modulus_of_elasticity_million_psi_note": { "type": "string" },
+        "work_to_max_load_in_lbf_per_in3": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "work_to_max_load_in_lbf_per_in3_note": { "type": "string" },
+        "impact_bending_in": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "impact_bending_in_note": { "type": "string" },
+        "compression_parallel_psi": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "compression_parallel_psi_note": { "type": "string" },
+        "compression_perpendicular_psi": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "compression_perpendicular_psi_note": { "type": "string" },
+        "shear_parallel_psi": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "shear_parallel_psi_note": { "type": "string" },
+        "tension_perpendicular_psi": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "tension_perpendicular_psi_note": { "type": "string" },
+        "side_hardness_lbf": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "side_hardness_lbf_note": { "type": "string" }
+      }
+    }
+  }
+}

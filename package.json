@@ -1,0 +1,40 @@
+{
+  "name": "xylarium",
+  "version": "0.0.0",
+  "description": "Wood species mechanical properties from the USDA Forest Products Laboratory Wood Handbook (FPL-GTR-282) as language-neutral JSON, with a schema and cross-implementation fixtures",
+  "license": "Apache-2.0",
+  "author": "Mark Brannan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-brannan/xylarium.git"
+  },
+  "homepage": "https://github.com/mark-brannan/xylarium#readme",
+  "bugs": {
+    "url": "https://github.com/mark-brannan/xylarium/issues"
+  },
+  "keywords": [
+    "wood",
+    "lumber",
+    "timber",
+    "wood-handbook",
+    "fpl-gtr-282",
+    "wood-species",
+    "mechanical-properties",
+    "specific-gravity",
+    "janka",
+    "modulus-of-rupture",
+    "woodworking"
+  ],
+  "scripts": {
+    "test": "node --test test/*.mjs"
+  },
+  "files": [
+    "data",
+    "fixtures",
+    "schema",
+    "docs"
+  ],
+  "devDependencies": {
+    "ajv": "^8.20.0"
+  }
+}

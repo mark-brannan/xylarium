@@ -1,0 +1,34 @@
+{
+  "$comment": "Prose budgets enforced by prose-budget (the engine in dotfiles .local/bin), run in CI by the shared workflow. Raising a number or adding an exception is a deliberate, reviewable diff.",
+  "lines": {
+    "README.md": 200,
+    "AGENTS.md": 120,
+    "CLAUDE.md": 10,
+    "CONTRIBUTING.md": 60,
+    "SECURITY.md": 60,
+    "docs/identifiers.md": 120,
+    "docs/adr/0001-name-and-scope.md": 300,
+    "required": true,
+    "pending": []
+  },
+  "json_prose": {
+    "targets": ["data/*.json", "fixtures/*.json"],
+    "keys": ["note", "scope", "description", "scientific_names", "rationale", "why"],
+    "max_chars": 450,
+    "grandfathered": []
+  },
+  "narration": {
+    "targets": ["README.md", "AGENTS.md", "CLAUDE.md", "data/*.json", "fixtures/*.json", "test/*.mjs", "docs/**/*.md"],
+    "scope": {
+      "pr": ["README.md", "AGENTS.md", "CLAUDE.md", "data/*.json", "fixtures/*.json", "test/*.mjs"],
+      "issue": ["README.md", "AGENTS.md", "CLAUDE.md", "data/*.json", "fixtures/*.json", "test/*.mjs"],
+      "phase": ["README.md", "AGENTS.md", "CLAUDE.md", "data/*.json", "fixtures/*.json", "test/*.mjs"],
+      "split": ["README.md", "AGENTS.md", "CLAUDE.md", "data/*.json", "fixtures/*.json", "test/*.mjs"]
+    },
+    "grandfathered": []
+  },
+  "voice": {
+    "scope": "tree",
+    "targets": ["README.md", "AGENTS.md", "CLAUDE.md", "docs/**/*.md", "data/*.json", "fixtures/*.json"]
+  }
+}
