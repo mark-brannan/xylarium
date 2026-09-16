@@ -41,6 +41,25 @@ test('data/species.json validates against schema/species.schema.json', () => {
   assert.ok(ok, ajv.errorsText(validate.errors, { separator: '\n' }))
 })
 
+// The per-table rules live in the schema, not only in the tests below: a
+// consumer holding the data file and the schema alone must be told that a
+// 5-3b row carries no sample origin and a 5-5b row must.
+test('schema rejects fields a row\'s table does not print', () => {
+  const ajv = new Ajv({ allErrors: true, strict: false })
+  const validate = ajv.compile(schema)
+  const clone = (id) => JSON.parse(JSON.stringify(data.species[id]))
+  const withRow = (id, row) => ({ ...data, species: { [id]: row } })
+  const us = clone('alder-red')
+  us.sample_origin = 'AM'
+  assert.ok(!validate(withRow('alder-red', us)), 'a 5-3b row with a sample origin')
+  const imported = clone('afrormosia')
+  delete imported.sample_origin
+  assert.ok(!validate(withRow('afrormosia', imported)), 'a 5-5b row without a sample origin')
+  imported.sample_origin = 'AF'
+  imported.group = 'hardwood'
+  assert.ok(!validate(withRow('afrormosia', imported)), 'a 5-5b row with a group')
+})
+
 test('every row of every transcribed table is present', () => {
   const counted = {}
   for (const s of Object.values(data.species)) {
@@ -101,6 +120,17 @@ test('group and scientific_name are present exactly where the table prints them'
       assert.equal(s.group, null, `${id}: Table 5-5 prints no group`)
       assert.ok('sample_origin' in s, `${id}: Table 5-5b prints a sample origin`)
       assert.match(s.sample_origin, /^(AF|AM|AS)$/, `${id}: sample_origin`)
+      if (s.handbook_label.startsWith('Shorea, lauan–meranti group, ')) {
+        assert.equal(s.scientific_name, null, `${id}: the lauan–meranti sub-rows print no binomial`)
+      } else {
+        // The label prints the binomial in parentheses; the two fields must
+        // agree, spacing included, or one of them is an extraction artifact.
+        assert.equal(typeof s.scientific_name, 'string', `${id}: 5-5b prints a binomial`)
+        assert.ok(
+          s.handbook_label.includes(`(${s.scientific_name}`),
+          `${id}: scientific_name ${s.scientific_name} is not in ${s.handbook_label}`,
+        )
+      }
     } else {
       assert.ok(['hardwood', 'softwood'].includes(s.group), `${id}: group`)
       assert.equal(s.scientific_name, null, `${id}: ${s.table} prints no binomial`)

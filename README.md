@@ -56,7 +56,8 @@ that leaves this package without its unit is a hazard.
 
 `group` is `null` on Table 5-5b rows because that table prints no
 hardwood/softwood split, and `scientific_name` is filled only on Table 5-5b
-rows because that is the only one of the three that prints a botanical name.
+rows because that is the only one of the three that prints a botanical name
+(its four lauan–meranti sub-rows print none, so those are `null` too).
 5-5b rows also carry `sample_origin` — `AF`, `AM` or `AS`, the table's own
 column.
 

@@ -273,5 +273,6 @@ green plus whichever one state its row prints.
 
 Not yet done, in the order §2 puts them: the chapter 4 datasets, chapter 6
 lumber sizes, chapter 8 fasteners. Scientific names are filled only on 5-5b
-rows, the only table of the three that prints a botanical name. The derived
+rows, the only table of the three that prints a botanical name, and null on
+its four lauan–meranti sub-rows, which print none. The derived
 density fixture in §3 waits on the chapter 4 relation.

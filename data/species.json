@@ -17,11 +17,11 @@
     "transcribed": "2026-09-15",
     "scope": "Tables 5-3b (woods grown in the United States), 5-4b (grown in Canada and imported) and 5-5b (imported other than from Canada), all inch-pound. Each row names its table in its \"table\" field.",
     "columns": "The three tables do not print the same columns. 5-4b prints no work to maximum load, impact bending, tension perpendicular or side hardness; 5-5b prints no impact bending or perpendicular values. Those cells are null.",
-    "scientific_names": "Tables 5-3 and 5-4 print no binomials, so every scientific_name in a 5-3b or 5-4b row is null. Table 5-5 prints the botanical name beside the common name, and those rows carry it as printed.",
+    "scientific_names": "Tables 5-3 and 5-4 print no binomials, so every scientific_name in a 5-3b or 5-4b row is null. Table 5-5 prints the botanical name beside the common name, and those rows carry it as printed; the four lauan-meranti sub-rows print none and are null.",
     "groups": "Table 5-4b splits its rows into Hardwoods and Softwoods; Tables 5-3b and 5-4b rows therefore carry a group. Table 5-5b prints no such split, so every 5-5b row has group null rather than a guess."
   },
   "units": {
-    "specific_gravity": "ovendry weight, volume at the stated moisture content (Table 5-3b footnote b). Tables 5-4b and 5-5b print one specific gravity per species, on ovendry weight and green volume (5-4b footnote a), so in those rows the value sits on the green state and the other state is null.",
+    "specific_gravity": "ovendry weight, volume at the stated moisture content (Table 5-3b footnote b). Tables 5-4b and 5-5b print one specific gravity per species, so in those rows the value sits on the green state and the other state is null. 5-4b footnote a states the basis: ovendry weight, green volume. 5-5b states no basis.",
     "moisture": "green | 12 | 15 (percent moisture content, as the table prints it)",
     "stress": "lbf in-2",
     "modulus": "10^6 lbf in-2",
@@ -4768,7 +4768,7 @@
     },
     "angelin": {
       "table": "5-5b",
-      "handbook_label": "Angelin (Andirainermis)",
+      "handbook_label": "Angelin (Andira inermis)",
       "scientific_name": "Andira inermis",
       "group": null,
       "origin": "imported",
@@ -5380,7 +5380,7 @@
     },
     "greenheart": {
       "table": "5-5b",
-      "handbook_label": "Greenheart (Chlorocardiumrodiei)",
+      "handbook_label": "Greenheart (Chlorocardium rodiei)",
       "scientific_name": "Chlorocardium rodiei",
       "group": null,
       "origin": "imported",
@@ -6128,7 +6128,7 @@
     },
     "mora": {
       "table": "5-5b",
-      "handbook_label": "Mora (Moraspp.)",
+      "handbook_label": "Mora (Mora spp.)",
       "scientific_name": "Mora spp.",
       "group": null,
       "origin": "imported",
@@ -6978,7 +6978,7 @@
     },
     "sepetir": {
       "table": "5-5b",
-      "handbook_label": "Sepetir (Pseudosindorapalustris)",
+      "handbook_label": "Sepetir (Pseudosindora palustris)",
       "scientific_name": "Pseudosindora palustris",
       "group": null,
       "origin": "imported",

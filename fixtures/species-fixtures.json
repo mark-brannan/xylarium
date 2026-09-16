@@ -1,5 +1,5 @@
 {
-  "description": "Cross-implementation fixtures for data/species.json. Any implementation reading this package must reproduce these outputs exactly. round_trip is the transcription check: each inch-pound table transcribed here is printed again in metric, so converting a cell must land on what the metric table prints, within the two printings' combined rounding.",
+  "description": "Cross-implementation fixtures for data/species.json; any implementation must reproduce these outputs exactly. round_trip is the transcription check: converting an inch-pound cell must land on the metric printing within the two printings' combined rounding. It samples rows; the every-cell sweep runs at transcription time, and its only findings are under handbook_internal_disagreements.",
   "conversion": {
     "note": "Each property, the field it converts to in the metric printing of its table, the factor, and the tolerance. 5-3a was converted from 5-3b (footnote a), so there the tolerance is half 5-3a's rounding step. Tables 5-4 and 5-5 declare no derivation, so there it is half each printing's step.",
     "table_oracle": {
