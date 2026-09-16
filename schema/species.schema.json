@@ -19,7 +19,9 @@
         "rights": { "type": "string" },
         "transcribed": { "type": ["string", "null"] },
         "scope": { "type": "string" },
-        "scientific_names": { "type": "string" }
+        "columns": { "type": "string" },
+        "scientific_names": { "type": "string" },
+        "groups": { "type": "string" }
       }
     },
     "units": {
@@ -36,34 +38,49 @@
   },
   "$defs": {
     "speciesId": {
-      "description": "Opaque slug, minted once from the Table 5-3 row label and never re-derived or parsed. See docs/identifiers.md.",
+      "description": "Opaque slug, minted once from the Handbook row label and never re-derived or parsed. See docs/identifiers.md.",
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "species": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["handbook_label", "scientific_name", "group", "origin", "properties"],
+      "required": ["table", "handbook_label", "scientific_name", "group", "origin", "properties"],
       "properties": {
+        "table": {
+          "description": "The Wood Handbook table this row was transcribed from. Two tables may print the same label, so a label is unique only within a table.",
+          "enum": ["5-3b", "5-4b", "5-5b"]
+        },
         "handbook_label": {
           "description": "The row label as the Handbook prints it, group heading first.",
           "type": "string",
           "minLength": 1
         },
         "scientific_name": {
-          "description": "Binomial. Null where no cited source has supplied one; Table 5-3 prints none.",
+          "description": "Botanical name as the Handbook prints it. Null where the table prints none; Tables 5-3 and 5-4 print none at all.",
           "type": ["string", "null"]
         },
-        "group": { "enum": ["hardwood", "softwood"] },
+        "group": {
+          "description": "Null where the table prints no hardwood/softwood split; Table 5-5 does not.",
+          "enum": ["hardwood", "softwood", null]
+        },
         "origin": { "enum": ["us", "imported"] },
+        "sample_origin": {
+          "description": "Table 5-5b's sample origin column: AF is Africa; AM, America; AS, Asia (footnote b). Absent for rows from tables that print no such column.",
+          "enum": ["AF", "AM", "AS"]
+        },
         "note": { "type": "string" },
         "properties": {
+          "description": "The green state plus the one conditioned state the row prints. Most rows print 12%; a handful of Table 5-5b rows print 15%.",
           "type": "object",
           "additionalProperties": false,
-          "required": ["green", "12"],
+          "required": ["green"],
+          "minProperties": 2,
+          "maxProperties": 2,
           "properties": {
             "green": { "$ref": "#/$defs/propertySet" },
-            "12": { "$ref": "#/$defs/propertySet" }
+            "12": { "$ref": "#/$defs/propertySet" },
+            "15": { "$ref": "#/$defs/propertySet" }
           }
         }
       }

@@ -3,29 +3,37 @@
     "instrument": "Wood Handbook: Wood as an Engineering Material, FPL-GTR-282 (2021)",
     "chapter": "5, Mechanical Properties of Wood",
     "tables": [
-      "5-3b"
+      "5-3b",
+      "5-4b",
+      "5-5b"
     ],
     "oracle_tables": [
-      "5-3a"
+      "5-3a",
+      "5-4a",
+      "5-5a"
     ],
     "url": "https://www.fpl.fs.usda.gov/documnts/fplgtr/fplgtr282/chapter_05_fpl_gtr282.pdf",
     "rights": "US Government work, 17 U.S.C. 105",
     "transcribed": "2026-09-15",
-    "scope": "Table 5-3b only: woods grown in the United States, inch-pound. Tables 5-4b (Canadian imports) and 5-5b (other imports) are not yet transcribed.",
-    "scientific_names": "Table 5-3 prints no binomials, so every scientific_name is null. They will be filled from a cited source, not from the transcriber's memory."
+    "scope": "Tables 5-3b (woods grown in the United States), 5-4b (grown in Canada and imported) and 5-5b (imported other than from Canada), all inch-pound. Each row names its table in its \"table\" field.",
+    "columns": "The three tables do not print the same columns. 5-4b prints no work to maximum load, impact bending, tension perpendicular or side hardness; 5-5b prints no impact bending or perpendicular values. Those cells are null.",
+    "scientific_names": "Tables 5-3 and 5-4 print no binomials, so every scientific_name in a 5-3b or 5-4b row is null. Table 5-5 prints the botanical name beside the common name, and those rows carry it as printed.",
+    "groups": "Table 5-4b splits its rows into Hardwoods and Softwoods; Tables 5-3b and 5-4b rows therefore carry a group. Table 5-5b prints no such split, so every 5-5b row has group null rather than a guess."
   },
   "units": {
-    "specific_gravity": "ovendry weight, volume at the stated moisture content (Table 5-3b footnote b)",
-    "moisture": "green | 12 (percent moisture content)",
+    "specific_gravity": "ovendry weight, volume at the stated moisture content (Table 5-3b footnote b). Tables 5-4b and 5-5b print one specific gravity per species, on ovendry weight and green volume (5-4b footnote a), so in those rows the value sits on the green state and the other state is null.",
+    "moisture": "green | 12 | 15 (percent moisture content, as the table prints it)",
     "stress": "lbf in-2",
     "modulus": "10^6 lbf in-2",
     "work": "in-lbf in-3",
     "impact": "in",
     "hardness": "lbf",
-    "modulus_of_elasticity_basis": "simply supported, center-loaded beam at a span-depth ratio of 14/1; increase by 10% to correct for shear deflection (footnote c)"
+    "modulus_of_elasticity_basis": "simply supported, center-loaded beam at a span-depth ratio of 14/1; increase by 10% to correct for shear deflection (footnote c)",
+    "sample_origin": "AF is Africa; AM, America; AS, Asia (Table 5-5b footnote b)"
   },
   "species": {
     "alder-red": {
+      "table": "5-3b",
       "handbook_label": "Alder, red",
       "scientific_name": null,
       "group": "hardwood",
@@ -58,6 +66,7 @@
       }
     },
     "ash-black": {
+      "table": "5-3b",
       "handbook_label": "Ash, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -90,6 +99,7 @@
       }
     },
     "ash-blue": {
+      "table": "5-3b",
       "handbook_label": "Ash, Blue",
       "scientific_name": null,
       "group": "hardwood",
@@ -122,6 +132,7 @@
       }
     },
     "ash-green": {
+      "table": "5-3b",
       "handbook_label": "Ash, Green",
       "scientific_name": null,
       "group": "hardwood",
@@ -154,6 +165,7 @@
       }
     },
     "ash-oregon": {
+      "table": "5-3b",
       "handbook_label": "Ash, Oregon",
       "scientific_name": null,
       "group": "hardwood",
@@ -186,6 +198,7 @@
       }
     },
     "ash-white": {
+      "table": "5-3b",
       "handbook_label": "Ash, White",
       "scientific_name": null,
       "group": "hardwood",
@@ -218,6 +231,7 @@
       }
     },
     "aspen-bigtooth": {
+      "table": "5-3b",
       "handbook_label": "Aspen, Bigtooth",
       "scientific_name": null,
       "group": "hardwood",
@@ -250,6 +264,7 @@
       }
     },
     "aspen-quaking": {
+      "table": "5-3b",
       "handbook_label": "Aspen, Quaking",
       "scientific_name": null,
       "group": "hardwood",
@@ -282,6 +297,7 @@
       }
     },
     "basswood-american": {
+      "table": "5-3b",
       "handbook_label": "Basswood, American",
       "scientific_name": null,
       "group": "hardwood",
@@ -314,6 +330,7 @@
       }
     },
     "beech-american": {
+      "table": "5-3b",
       "handbook_label": "Beech, American",
       "scientific_name": null,
       "group": "hardwood",
@@ -346,6 +363,7 @@
       }
     },
     "birch-paper": {
+      "table": "5-3b",
       "handbook_label": "Birch, Paper",
       "scientific_name": null,
       "group": "hardwood",
@@ -378,6 +396,7 @@
       }
     },
     "birch-sweet": {
+      "table": "5-3b",
       "handbook_label": "Birch, Sweet",
       "scientific_name": null,
       "group": "hardwood",
@@ -410,6 +429,7 @@
       }
     },
     "birch-yellow": {
+      "table": "5-3b",
       "handbook_label": "Birch, Yellow",
       "scientific_name": null,
       "group": "hardwood",
@@ -442,6 +462,7 @@
       }
     },
     "butternut": {
+      "table": "5-3b",
       "handbook_label": "Butternut",
       "scientific_name": null,
       "group": "hardwood",
@@ -474,6 +495,7 @@
       }
     },
     "cherry-black": {
+      "table": "5-3b",
       "handbook_label": "Cherry, black",
       "scientific_name": null,
       "group": "hardwood",
@@ -506,6 +528,7 @@
       }
     },
     "chestnut-american": {
+      "table": "5-3b",
       "handbook_label": "Chestnut, American",
       "scientific_name": null,
       "group": "hardwood",
@@ -538,6 +561,7 @@
       }
     },
     "cottonwood-balsam-poplar": {
+      "table": "5-3b",
       "handbook_label": "Cottonwood, Balsam, poplar",
       "scientific_name": null,
       "group": "hardwood",
@@ -570,6 +594,7 @@
       }
     },
     "cottonwood-black": {
+      "table": "5-3b",
       "handbook_label": "Cottonwood, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -602,6 +627,7 @@
       }
     },
     "cottonwood-eastern": {
+      "table": "5-3b",
       "handbook_label": "Cottonwood, Eastern",
       "scientific_name": null,
       "group": "hardwood",
@@ -634,6 +660,7 @@
       }
     },
     "elm-american": {
+      "table": "5-3b",
       "handbook_label": "Elm, American",
       "scientific_name": null,
       "group": "hardwood",
@@ -666,6 +693,7 @@
       }
     },
     "elm-rock": {
+      "table": "5-3b",
       "handbook_label": "Elm, Rock",
       "scientific_name": null,
       "group": "hardwood",
@@ -698,6 +726,7 @@
       }
     },
     "elm-slippery": {
+      "table": "5-3b",
       "handbook_label": "Elm, Slippery",
       "scientific_name": null,
       "group": "hardwood",
@@ -730,6 +759,7 @@
       }
     },
     "hackberry": {
+      "table": "5-3b",
       "handbook_label": "Hackberry",
       "scientific_name": null,
       "group": "hardwood",
@@ -762,6 +792,7 @@
       }
     },
     "hickory-pecan-bitternut": {
+      "table": "5-3b",
       "handbook_label": "Hickory, pecan, Bitternut",
       "scientific_name": null,
       "group": "hardwood",
@@ -794,6 +825,7 @@
       }
     },
     "hickory-pecan-nutmeg": {
+      "table": "5-3b",
       "handbook_label": "Hickory, pecan, Nutmeg",
       "scientific_name": null,
       "group": "hardwood",
@@ -826,6 +858,7 @@
       }
     },
     "hickory-pecan-pecan": {
+      "table": "5-3b",
       "handbook_label": "Hickory, pecan, Pecan",
       "scientific_name": null,
       "group": "hardwood",
@@ -858,6 +891,7 @@
       }
     },
     "hickory-pecan-water": {
+      "table": "5-3b",
       "handbook_label": "Hickory, pecan, Water",
       "scientific_name": null,
       "group": "hardwood",
@@ -890,6 +924,7 @@
       }
     },
     "hickory-true-mockernut": {
+      "table": "5-3b",
       "handbook_label": "Hickory, true, Mockernut",
       "scientific_name": null,
       "group": "hardwood",
@@ -924,6 +959,7 @@
       }
     },
     "hickory-true-pignut": {
+      "table": "5-3b",
       "handbook_label": "Hickory, true, Pignut",
       "scientific_name": null,
       "group": "hardwood",
@@ -958,6 +994,7 @@
       }
     },
     "hickory-true-shagbark": {
+      "table": "5-3b",
       "handbook_label": "Hickory, true, Shagbark",
       "scientific_name": null,
       "group": "hardwood",
@@ -992,6 +1029,7 @@
       }
     },
     "hickory-true-shellbark": {
+      "table": "5-3b",
       "handbook_label": "Hickory, true, Shellbark",
       "scientific_name": null,
       "group": "hardwood",
@@ -1026,6 +1064,7 @@
       }
     },
     "honeylocust": {
+      "table": "5-3b",
       "handbook_label": "Honeylocust",
       "scientific_name": null,
       "group": "hardwood",
@@ -1058,6 +1097,7 @@
       }
     },
     "locust-black": {
+      "table": "5-3b",
       "handbook_label": "Locust, black",
       "scientific_name": null,
       "group": "hardwood",
@@ -1090,6 +1130,7 @@
       }
     },
     "magnolia-cucumbertree": {
+      "table": "5-3b",
       "handbook_label": "Magnolia, Cucumbertree",
       "scientific_name": null,
       "group": "hardwood",
@@ -1122,6 +1163,7 @@
       }
     },
     "magnolia-southern": {
+      "table": "5-3b",
       "handbook_label": "Magnolia, Southern",
       "scientific_name": null,
       "group": "hardwood",
@@ -1154,6 +1196,7 @@
       }
     },
     "maple-bigleaf": {
+      "table": "5-3b",
       "handbook_label": "Maple, Bigleaf",
       "scientific_name": null,
       "group": "hardwood",
@@ -1186,6 +1229,7 @@
       }
     },
     "maple-black": {
+      "table": "5-3b",
       "handbook_label": "Maple, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -1218,6 +1262,7 @@
       }
     },
     "maple-red": {
+      "table": "5-3b",
       "handbook_label": "Maple, Red",
       "scientific_name": null,
       "group": "hardwood",
@@ -1250,6 +1295,7 @@
       }
     },
     "maple-silver": {
+      "table": "5-3b",
       "handbook_label": "Maple, Silver",
       "scientific_name": null,
       "group": "hardwood",
@@ -1282,6 +1328,7 @@
       }
     },
     "maple-sugar": {
+      "table": "5-3b",
       "handbook_label": "Maple, Sugar",
       "scientific_name": null,
       "group": "hardwood",
@@ -1314,6 +1361,7 @@
       }
     },
     "oak-red-black": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -1346,6 +1394,7 @@
       }
     },
     "oak-red-cherrybark": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Cherrybark",
       "scientific_name": null,
       "group": "hardwood",
@@ -1378,6 +1427,7 @@
       }
     },
     "oak-red-laurel": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Laurel",
       "scientific_name": null,
       "group": "hardwood",
@@ -1410,6 +1460,7 @@
       }
     },
     "oak-red-northern-red": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Northern red",
       "scientific_name": null,
       "group": "hardwood",
@@ -1442,6 +1493,7 @@
       }
     },
     "oak-red-pin": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Pin",
       "scientific_name": null,
       "group": "hardwood",
@@ -1474,6 +1526,7 @@
       }
     },
     "oak-red-scarlet": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Scarlet",
       "scientific_name": null,
       "group": "hardwood",
@@ -1506,6 +1559,7 @@
       }
     },
     "oak-red-southern-red": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Southern red",
       "scientific_name": null,
       "group": "hardwood",
@@ -1538,6 +1592,7 @@
       }
     },
     "oak-red-water": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Water",
       "scientific_name": null,
       "group": "hardwood",
@@ -1570,6 +1625,7 @@
       }
     },
     "oak-red-willow": {
+      "table": "5-3b",
       "handbook_label": "Oak, red, Willow",
       "scientific_name": null,
       "group": "hardwood",
@@ -1602,6 +1658,7 @@
       }
     },
     "oak-white-bur": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Bur",
       "scientific_name": null,
       "group": "hardwood",
@@ -1634,6 +1691,7 @@
       }
     },
     "oak-white-chestnut": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Chestnut",
       "scientific_name": null,
       "group": "hardwood",
@@ -1666,6 +1724,7 @@
       }
     },
     "oak-white-live": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Live",
       "scientific_name": null,
       "group": "hardwood",
@@ -1698,6 +1757,7 @@
       }
     },
     "oak-white-overcup": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Overcup",
       "scientific_name": null,
       "group": "hardwood",
@@ -1730,6 +1790,7 @@
       }
     },
     "oak-white-post": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Post",
       "scientific_name": null,
       "group": "hardwood",
@@ -1762,6 +1823,7 @@
       }
     },
     "oak-white-swamp-chestnut": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Swamp chestnut",
       "scientific_name": null,
       "group": "hardwood",
@@ -1794,6 +1856,7 @@
       }
     },
     "oak-white-swamp-white": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, Swamp white",
       "scientific_name": null,
       "group": "hardwood",
@@ -1826,6 +1889,7 @@
       }
     },
     "oak-white-white": {
+      "table": "5-3b",
       "handbook_label": "Oak, white, White",
       "scientific_name": null,
       "group": "hardwood",
@@ -1858,6 +1922,7 @@
       }
     },
     "sassafras": {
+      "table": "5-3b",
       "handbook_label": "Sassafras",
       "scientific_name": null,
       "group": "hardwood",
@@ -1890,6 +1955,7 @@
       }
     },
     "sweetgum": {
+      "table": "5-3b",
       "handbook_label": "Sweetgum",
       "scientific_name": null,
       "group": "hardwood",
@@ -1922,6 +1988,7 @@
       }
     },
     "sycamore-american": {
+      "table": "5-3b",
       "handbook_label": "Sycamore, American",
       "scientific_name": null,
       "group": "hardwood",
@@ -1954,6 +2021,7 @@
       }
     },
     "tanoak": {
+      "table": "5-3b",
       "handbook_label": "Tanoak",
       "scientific_name": null,
       "group": "hardwood",
@@ -1986,6 +2054,7 @@
       }
     },
     "tupelo-black": {
+      "table": "5-3b",
       "handbook_label": "Tupelo, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -2018,6 +2087,7 @@
       }
     },
     "tupelo-water": {
+      "table": "5-3b",
       "handbook_label": "Tupelo, Water",
       "scientific_name": null,
       "group": "hardwood",
@@ -2050,6 +2120,7 @@
       }
     },
     "walnut-black": {
+      "table": "5-3b",
       "handbook_label": "Walnut, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -2082,6 +2153,7 @@
       }
     },
     "willow-black": {
+      "table": "5-3b",
       "handbook_label": "Willow, Black",
       "scientific_name": null,
       "group": "hardwood",
@@ -2114,6 +2186,7 @@
       }
     },
     "yellow-poplar": {
+      "table": "5-3b",
       "handbook_label": "Yellow-poplar",
       "scientific_name": null,
       "group": "hardwood",
@@ -2146,6 +2219,7 @@
       }
     },
     "baldcypress": {
+      "table": "5-3b",
       "handbook_label": "Baldcypress",
       "scientific_name": null,
       "group": "softwood",
@@ -2178,6 +2252,7 @@
       }
     },
     "cedar-atlantic-white": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Atlantic white",
       "scientific_name": null,
       "group": "softwood",
@@ -2210,6 +2285,7 @@
       }
     },
     "cedar-eastern-redcedar": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Eastern redcedar",
       "scientific_name": null,
       "group": "softwood",
@@ -2242,6 +2318,7 @@
       }
     },
     "cedar-incense": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Incense",
       "scientific_name": null,
       "group": "softwood",
@@ -2274,6 +2351,7 @@
       }
     },
     "cedar-northern-white": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Northern White",
       "scientific_name": null,
       "group": "softwood",
@@ -2306,6 +2384,7 @@
       }
     },
     "cedar-port-orford": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Port-Orford",
       "scientific_name": null,
       "group": "softwood",
@@ -2338,6 +2417,7 @@
       }
     },
     "cedar-western-redcedar": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Western redcedar",
       "scientific_name": null,
       "group": "softwood",
@@ -2370,6 +2450,7 @@
       }
     },
     "cedar-yellow": {
+      "table": "5-3b",
       "handbook_label": "Cedar, Yellow",
       "scientific_name": null,
       "group": "softwood",
@@ -2402,6 +2483,7 @@
       }
     },
     "douglas-fir-coast": {
+      "table": "5-3b",
       "handbook_label": "Douglas-fir, Coast",
       "scientific_name": null,
       "group": "softwood",
@@ -2435,6 +2517,7 @@
       "note": "Coast Douglas-fir grows in Oregon and Washington west of the Cascade summit; Interior West is California and the Oregon and Washington counties east of but adjacent to the summit; Interior North the rest of Oregon and Washington plus Idaho, Montana and Wyoming; Interior South is Utah, Colorado, Arizona and New Mexico (Table 5-3b footnote e)."
     },
     "douglas-fir-interior-west": {
+      "table": "5-3b",
       "handbook_label": "Douglas-fir, Interior West",
       "scientific_name": null,
       "group": "softwood",
@@ -2468,6 +2551,7 @@
       "note": "Coast Douglas-fir grows in Oregon and Washington west of the Cascade summit; Interior West is California and the Oregon and Washington counties east of but adjacent to the summit; Interior North the rest of Oregon and Washington plus Idaho, Montana and Wyoming; Interior South is Utah, Colorado, Arizona and New Mexico (Table 5-3b footnote e)."
     },
     "douglas-fir-interior-north": {
+      "table": "5-3b",
       "handbook_label": "Douglas-fir, Interior North",
       "scientific_name": null,
       "group": "softwood",
@@ -2501,6 +2585,7 @@
       "note": "Coast Douglas-fir grows in Oregon and Washington west of the Cascade summit; Interior West is California and the Oregon and Washington counties east of but adjacent to the summit; Interior North the rest of Oregon and Washington plus Idaho, Montana and Wyoming; Interior South is Utah, Colorado, Arizona and New Mexico (Table 5-3b footnote e)."
     },
     "douglas-fir-interior-south": {
+      "table": "5-3b",
       "handbook_label": "Douglas-fir, Interior South",
       "scientific_name": null,
       "group": "softwood",
@@ -2534,6 +2619,7 @@
       "note": "Coast Douglas-fir grows in Oregon and Washington west of the Cascade summit; Interior West is California and the Oregon and Washington counties east of but adjacent to the summit; Interior North the rest of Oregon and Washington plus Idaho, Montana and Wyoming; Interior South is Utah, Colorado, Arizona and New Mexico (Table 5-3b footnote e)."
     },
     "fir-balsam": {
+      "table": "5-3b",
       "handbook_label": "Fir, Balsam",
       "scientific_name": null,
       "group": "softwood",
@@ -2566,6 +2652,7 @@
       }
     },
     "fir-california-red": {
+      "table": "5-3b",
       "handbook_label": "Fir, California red",
       "scientific_name": null,
       "group": "softwood",
@@ -2598,6 +2685,7 @@
       }
     },
     "fir-grand": {
+      "table": "5-3b",
       "handbook_label": "Fir, Grand",
       "scientific_name": null,
       "group": "softwood",
@@ -2630,6 +2718,7 @@
       }
     },
     "fir-noble": {
+      "table": "5-3b",
       "handbook_label": "Fir, Noble",
       "scientific_name": null,
       "group": "softwood",
@@ -2662,6 +2751,7 @@
       }
     },
     "fir-pacific-silver": {
+      "table": "5-3b",
       "handbook_label": "Fir, Pacific silver",
       "scientific_name": null,
       "group": "softwood",
@@ -2694,6 +2784,7 @@
       }
     },
     "fir-subalpine": {
+      "table": "5-3b",
       "handbook_label": "Fir, Subalpine",
       "scientific_name": null,
       "group": "softwood",
@@ -2726,6 +2817,7 @@
       }
     },
     "fir-white": {
+      "table": "5-3b",
       "handbook_label": "Fir, White",
       "scientific_name": null,
       "group": "softwood",
@@ -2758,6 +2850,7 @@
       }
     },
     "hemlock-eastern": {
+      "table": "5-3b",
       "handbook_label": "Hemlock, Eastern",
       "scientific_name": null,
       "group": "softwood",
@@ -2790,6 +2883,7 @@
       }
     },
     "hemlock-mountain": {
+      "table": "5-3b",
       "handbook_label": "Hemlock, Mountain",
       "scientific_name": null,
       "group": "softwood",
@@ -2822,6 +2916,7 @@
       }
     },
     "hemlock-western": {
+      "table": "5-3b",
       "handbook_label": "Hemlock, Western",
       "scientific_name": null,
       "group": "softwood",
@@ -2854,6 +2949,7 @@
       }
     },
     "larch-western": {
+      "table": "5-3b",
       "handbook_label": "Larch, western",
       "scientific_name": null,
       "group": "softwood",
@@ -2886,6 +2982,7 @@
       }
     },
     "pine-eastern-white": {
+      "table": "5-3b",
       "handbook_label": "Pine, Eastern white",
       "scientific_name": null,
       "group": "softwood",
@@ -2918,6 +3015,7 @@
       }
     },
     "pine-jack": {
+      "table": "5-3b",
       "handbook_label": "Pine, Jack",
       "scientific_name": null,
       "group": "softwood",
@@ -2950,6 +3048,7 @@
       }
     },
     "pine-loblolly": {
+      "table": "5-3b",
       "handbook_label": "Pine, Loblolly",
       "scientific_name": null,
       "group": "softwood",
@@ -2982,6 +3081,7 @@
       }
     },
     "pine-lodgepole": {
+      "table": "5-3b",
       "handbook_label": "Pine, Lodgepole",
       "scientific_name": null,
       "group": "softwood",
@@ -3014,6 +3114,7 @@
       }
     },
     "pine-longleaf": {
+      "table": "5-3b",
       "handbook_label": "Pine, Longleaf",
       "scientific_name": null,
       "group": "softwood",
@@ -3046,6 +3147,7 @@
       }
     },
     "pine-pitch": {
+      "table": "5-3b",
       "handbook_label": "Pine, Pitch",
       "scientific_name": null,
       "group": "softwood",
@@ -3078,6 +3180,7 @@
       }
     },
     "pine-pond": {
+      "table": "5-3b",
       "handbook_label": "Pine, Pond",
       "scientific_name": null,
       "group": "softwood",
@@ -3110,6 +3213,7 @@
       }
     },
     "pine-ponderosa": {
+      "table": "5-3b",
       "handbook_label": "Pine, Ponderosa",
       "scientific_name": null,
       "group": "softwood",
@@ -3142,6 +3246,7 @@
       }
     },
     "pine-red": {
+      "table": "5-3b",
       "handbook_label": "Pine, Red",
       "scientific_name": null,
       "group": "softwood",
@@ -3174,6 +3279,7 @@
       }
     },
     "pine-sand": {
+      "table": "5-3b",
       "handbook_label": "Pine, Sand",
       "scientific_name": null,
       "group": "softwood",
@@ -3206,6 +3312,7 @@
       }
     },
     "pine-shortleaf": {
+      "table": "5-3b",
       "handbook_label": "Pine, Shortleaf",
       "scientific_name": null,
       "group": "softwood",
@@ -3238,6 +3345,7 @@
       }
     },
     "pine-slash": {
+      "table": "5-3b",
       "handbook_label": "Pine, Slash",
       "scientific_name": null,
       "group": "softwood",
@@ -3270,6 +3378,7 @@
       }
     },
     "pine-spruce": {
+      "table": "5-3b",
       "handbook_label": "Pine, Spruce",
       "scientific_name": null,
       "group": "softwood",
@@ -3302,6 +3411,7 @@
       }
     },
     "pine-sugar": {
+      "table": "5-3b",
       "handbook_label": "Pine, Sugar",
       "scientific_name": null,
       "group": "softwood",
@@ -3334,6 +3444,7 @@
       }
     },
     "pine-virginia": {
+      "table": "5-3b",
       "handbook_label": "Pine, Virginia",
       "scientific_name": null,
       "group": "softwood",
@@ -3366,6 +3477,7 @@
       }
     },
     "pine-western-white": {
+      "table": "5-3b",
       "handbook_label": "Pine, Western white",
       "scientific_name": null,
       "group": "softwood",
@@ -3398,6 +3510,7 @@
       }
     },
     "redwood-old-growth": {
+      "table": "5-3b",
       "handbook_label": "Redwood, Old-growth",
       "scientific_name": null,
       "group": "softwood",
@@ -3430,6 +3543,7 @@
       }
     },
     "redwood-young-growth": {
+      "table": "5-3b",
       "handbook_label": "Redwood, Young-growth",
       "scientific_name": null,
       "group": "softwood",
@@ -3462,6 +3576,7 @@
       }
     },
     "spruce-black": {
+      "table": "5-3b",
       "handbook_label": "Spruce, Black",
       "scientific_name": null,
       "group": "softwood",
@@ -3494,6 +3609,7 @@
       }
     },
     "spruce-engelmann": {
+      "table": "5-3b",
       "handbook_label": "Spruce, Engelmann",
       "scientific_name": null,
       "group": "softwood",
@@ -3526,6 +3642,7 @@
       }
     },
     "spruce-red": {
+      "table": "5-3b",
       "handbook_label": "Spruce, Red",
       "scientific_name": null,
       "group": "softwood",
@@ -3558,6 +3675,7 @@
       }
     },
     "spruce-sitka": {
+      "table": "5-3b",
       "handbook_label": "Spruce, Sitka",
       "scientific_name": null,
       "group": "softwood",
@@ -3590,6 +3708,7 @@
       }
     },
     "spruce-white": {
+      "table": "5-3b",
       "handbook_label": "Spruce, White",
       "scientific_name": null,
       "group": "softwood",
@@ -3622,6 +3741,7 @@
       }
     },
     "tamarack": {
+      "table": "5-3b",
       "handbook_label": "Tamarack",
       "scientific_name": null,
       "group": "softwood",
@@ -3650,6 +3770,3617 @@
           "shear_parallel_psi": 1280,
           "tension_perpendicular_psi": 400,
           "side_hardness_lbf": 590
+        }
+      }
+    },
+    "ca-aspen-quaking": {
+      "table": "5-4b",
+      "handbook_label": "Aspen, Quaking",
+      "scientific_name": null,
+      "group": "hardwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.37,
+          "modulus_of_rupture_psi": 5500,
+          "modulus_of_elasticity_million_psi": 1.31,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2350,
+          "compression_perpendicular_psi": 200,
+          "shear_parallel_psi": 720,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9800,
+          "modulus_of_elasticity_million_psi": 1.63,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5260,
+          "compression_perpendicular_psi": 510,
+          "shear_parallel_psi": 980,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-aspen-bigtooth": {
+      "table": "5-4b",
+      "handbook_label": "Aspen, Bigtooth",
+      "scientific_name": null,
+      "group": "hardwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.39,
+          "modulus_of_rupture_psi": 5300,
+          "modulus_of_elasticity_million_psi": 1.08,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2390,
+          "compression_perpendicular_psi": 210,
+          "shear_parallel_psi": 790,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9500,
+          "modulus_of_elasticity_million_psi": 1.26,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4760,
+          "compression_perpendicular_psi": 470,
+          "shear_parallel_psi": 1100,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-cottonwood-balsam-poplar": {
+      "table": "5-4b",
+      "handbook_label": "Cottonwood, Balsam, poplar",
+      "scientific_name": null,
+      "group": "hardwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.37,
+          "modulus_of_rupture_psi": 5000,
+          "modulus_of_elasticity_million_psi": 1.15,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2110,
+          "compression_perpendicular_psi": 180,
+          "shear_parallel_psi": 670,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10100,
+          "modulus_of_elasticity_million_psi": 1.67,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5020,
+          "compression_perpendicular_psi": 420,
+          "shear_parallel_psi": 890,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-cottonwood-black": {
+      "table": "5-4b",
+      "handbook_label": "Cottonwood, Black",
+      "scientific_name": null,
+      "group": "hardwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.3,
+          "modulus_of_rupture_psi": 4100,
+          "modulus_of_elasticity_million_psi": 0.97,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 1860,
+          "compression_perpendicular_psi": 100,
+          "shear_parallel_psi": 560,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7100,
+          "modulus_of_elasticity_million_psi": 1.28,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4020,
+          "compression_perpendicular_psi": 260,
+          "shear_parallel_psi": 860,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-cottonwood-eastern": {
+      "table": "5-4b",
+      "handbook_label": "Cottonwood, Eastern",
+      "scientific_name": null,
+      "group": "hardwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.35,
+          "modulus_of_rupture_psi": 4700,
+          "modulus_of_elasticity_million_psi": 0.87,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 1970,
+          "compression_perpendicular_psi": 210,
+          "shear_parallel_psi": 770,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7500,
+          "modulus_of_elasticity_million_psi": 1.13,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3840,
+          "compression_perpendicular_psi": 470,
+          "shear_parallel_psi": 1160,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-cedar-northern-white": {
+      "table": "5-4b",
+      "handbook_label": "Cedar, Northern white",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.3,
+          "modulus_of_rupture_psi": 3900,
+          "modulus_of_elasticity_million_psi": 0.52,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 1890,
+          "compression_perpendicular_psi": 200,
+          "shear_parallel_psi": 660,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 6100,
+          "modulus_of_elasticity_million_psi": 0.63,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3590,
+          "compression_perpendicular_psi": 390,
+          "shear_parallel_psi": 1000,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-cedar-western-redcedar": {
+      "table": "5-4b",
+      "handbook_label": "Cedar, Western redcedar",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.31,
+          "modulus_of_rupture_psi": 5300,
+          "modulus_of_elasticity_million_psi": 1.05,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2780,
+          "compression_perpendicular_psi": 280,
+          "shear_parallel_psi": 700,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7800,
+          "modulus_of_elasticity_million_psi": 1.19,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4290,
+          "compression_perpendicular_psi": 500,
+          "shear_parallel_psi": 810,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-cedar-yellow": {
+      "table": "5-4b",
+      "handbook_label": "Cedar, Yellow",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.42,
+          "modulus_of_rupture_psi": 6600,
+          "modulus_of_elasticity_million_psi": 1.34,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3240,
+          "compression_perpendicular_psi": 350,
+          "shear_parallel_psi": 880,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11600,
+          "modulus_of_elasticity_million_psi": 1.59,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6640,
+          "compression_perpendicular_psi": 690,
+          "shear_parallel_psi": 1340,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-douglas-fir": {
+      "table": "5-4b",
+      "handbook_label": "Douglas-fir",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.45,
+          "modulus_of_rupture_psi": 7500,
+          "modulus_of_elasticity_million_psi": 1.61,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3610,
+          "compression_perpendicular_psi": 460,
+          "shear_parallel_psi": 920,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 12800,
+          "modulus_of_elasticity_million_psi": 1.97,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7260,
+          "compression_perpendicular_psi": 870,
+          "shear_parallel_psi": 1380,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-fir-balsam": {
+      "table": "5-4b",
+      "handbook_label": "Fir, Balsam",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.34,
+          "modulus_of_rupture_psi": 5300,
+          "modulus_of_elasticity_million_psi": 1.13,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2440,
+          "compression_perpendicular_psi": 240,
+          "shear_parallel_psi": 680,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 8500,
+          "modulus_of_elasticity_million_psi": 1.4,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4980,
+          "compression_perpendicular_psi": 460,
+          "shear_parallel_psi": 910,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-fir-pacific-silver": {
+      "table": "5-4b",
+      "handbook_label": "Fir, Pacific silver",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.36,
+          "modulus_of_rupture_psi": 5500,
+          "modulus_of_elasticity_million_psi": 1.35,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2770,
+          "compression_perpendicular_psi": 230,
+          "shear_parallel_psi": 710,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10000,
+          "modulus_of_elasticity_million_psi": 1.64,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5930,
+          "compression_perpendicular_psi": 520,
+          "shear_parallel_psi": 1190,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-fir-subalpine": {
+      "table": "5-4b",
+      "handbook_label": "Fir, Subalpine",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.33,
+          "modulus_of_rupture_psi": 5200,
+          "modulus_of_elasticity_million_psi": 1.26,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2500,
+          "compression_perpendicular_psi": 260,
+          "shear_parallel_psi": 680,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 8200,
+          "modulus_of_elasticity_million_psi": 1.48,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5280,
+          "compression_perpendicular_psi": 540,
+          "shear_parallel_psi": 980,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-hemlock-eastern": {
+      "table": "5-4b",
+      "handbook_label": "Hemlock, Eastern",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.4,
+          "modulus_of_rupture_psi": 6800,
+          "modulus_of_elasticity_million_psi": 1.27,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3430,
+          "compression_perpendicular_psi": 400,
+          "shear_parallel_psi": 910,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9700,
+          "modulus_of_elasticity_million_psi": 1.41,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5970,
+          "compression_perpendicular_psi": 630,
+          "shear_parallel_psi": 1260,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-hemlock-western": {
+      "table": "5-4b",
+      "handbook_label": "Hemlock, Western",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.41,
+          "modulus_of_rupture_psi": 7000,
+          "modulus_of_elasticity_million_psi": 1.48,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3580,
+          "compression_perpendicular_psi": 370,
+          "shear_parallel_psi": 750,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11800,
+          "modulus_of_elasticity_million_psi": 1.79,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6770,
+          "compression_perpendicular_psi": 660,
+          "shear_parallel_psi": 940,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-larch-western": {
+      "table": "5-4b",
+      "handbook_label": "Larch, western",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.55,
+          "modulus_of_rupture_psi": 8700,
+          "modulus_of_elasticity_million_psi": 1.65,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4420,
+          "compression_perpendicular_psi": 520,
+          "shear_parallel_psi": 920,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 15500,
+          "modulus_of_elasticity_million_psi": 2.08,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8840,
+          "compression_perpendicular_psi": 1060,
+          "shear_parallel_psi": 1340,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-pine-eastern-white": {
+      "table": "5-4b",
+      "handbook_label": "Pine, Eastern white",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.36,
+          "modulus_of_rupture_psi": 5100,
+          "modulus_of_elasticity_million_psi": 1.18,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2590,
+          "compression_perpendicular_psi": 240,
+          "shear_parallel_psi": 640,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9500,
+          "modulus_of_elasticity_million_psi": 1.36,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5230,
+          "compression_perpendicular_psi": 490,
+          "shear_parallel_psi": 880,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-pine-jack": {
+      "table": "5-4b",
+      "handbook_label": "Pine, Jack",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.42,
+          "modulus_of_rupture_psi": 6300,
+          "modulus_of_elasticity_million_psi": 1.17,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2950,
+          "compression_perpendicular_psi": 340,
+          "shear_parallel_psi": 820,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11300,
+          "modulus_of_elasticity_million_psi": 1.48,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5870,
+          "compression_perpendicular_psi": 830,
+          "shear_parallel_psi": 1190,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-pine-lodgepole": {
+      "table": "5-4b",
+      "handbook_label": "Pine, Lodgepole",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.4,
+          "modulus_of_rupture_psi": 5600,
+          "modulus_of_elasticity_million_psi": 1.27,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2860,
+          "compression_perpendicular_psi": 280,
+          "shear_parallel_psi": 720,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11000,
+          "modulus_of_elasticity_million_psi": 1.58,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6260,
+          "compression_perpendicular_psi": 530,
+          "shear_parallel_psi": 1240,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-pine-ponderosa": {
+      "table": "5-4b",
+      "handbook_label": "Pine, Ponderosa",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.44,
+          "modulus_of_rupture_psi": 5700,
+          "modulus_of_elasticity_million_psi": 1.13,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2840,
+          "compression_perpendicular_psi": 350,
+          "shear_parallel_psi": 720,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10600,
+          "modulus_of_elasticity_million_psi": 1.38,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6130,
+          "compression_perpendicular_psi": 760,
+          "shear_parallel_psi": 1020,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-pine-red": {
+      "table": "5-4b",
+      "handbook_label": "Pine, Red",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.39,
+          "modulus_of_rupture_psi": 5000,
+          "modulus_of_elasticity_million_psi": 1.07,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2370,
+          "compression_perpendicular_psi": 280,
+          "shear_parallel_psi": 710,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10100,
+          "modulus_of_elasticity_million_psi": 1.38,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5500,
+          "compression_perpendicular_psi": 720,
+          "shear_parallel_psi": 1090,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-pine-western-white": {
+      "table": "5-4b",
+      "handbook_label": "Pine, Western white",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.36,
+          "modulus_of_rupture_psi": 4800,
+          "modulus_of_elasticity_million_psi": 1.19,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2520,
+          "compression_perpendicular_psi": 240,
+          "shear_parallel_psi": 650,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9300,
+          "modulus_of_elasticity_million_psi": 1.46,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5240,
+          "compression_perpendicular_psi": 470,
+          "shear_parallel_psi": 920,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-spruce-black": {
+      "table": "5-4b",
+      "handbook_label": "Spruce, Black",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.41,
+          "modulus_of_rupture_psi": 5900,
+          "modulus_of_elasticity_million_psi": 1.32,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2760,
+          "compression_perpendicular_psi": 300,
+          "shear_parallel_psi": 800,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11400,
+          "modulus_of_elasticity_million_psi": 1.52,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6040,
+          "compression_perpendicular_psi": 620,
+          "shear_parallel_psi": 1250,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-spruce-engelmann": {
+      "table": "5-4b",
+      "handbook_label": "Spruce, Engelmann",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.38,
+          "modulus_of_rupture_psi": 5700,
+          "modulus_of_elasticity_million_psi": 1.25,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2810,
+          "compression_perpendicular_psi": 270,
+          "shear_parallel_psi": 700,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10100,
+          "modulus_of_elasticity_million_psi": 1.55,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6150,
+          "compression_perpendicular_psi": 540,
+          "shear_parallel_psi": 1100,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-spruce-red": {
+      "table": "5-4b",
+      "handbook_label": "Spruce, Red",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.38,
+          "modulus_of_rupture_psi": 5900,
+          "modulus_of_elasticity_million_psi": 1.32,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2810,
+          "compression_perpendicular_psi": 270,
+          "shear_parallel_psi": 810,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10300,
+          "modulus_of_elasticity_million_psi": 1.6,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5590,
+          "compression_perpendicular_psi": 550,
+          "shear_parallel_psi": 1330,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-spruce-sitka": {
+      "table": "5-4b",
+      "handbook_label": "Spruce, Sitka",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.35,
+          "modulus_of_rupture_psi": 5400,
+          "modulus_of_elasticity_million_psi": 1.37,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2560,
+          "compression_perpendicular_psi": 290,
+          "shear_parallel_psi": 630,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10100,
+          "modulus_of_elasticity_million_psi": 1.63,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5480,
+          "compression_perpendicular_psi": 590,
+          "shear_parallel_psi": 980,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-spruce-white": {
+      "table": "5-4b",
+      "handbook_label": "Spruce, White",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.35,
+          "modulus_of_rupture_psi": 5100,
+          "modulus_of_elasticity_million_psi": 1.15,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2470,
+          "compression_perpendicular_psi": 240,
+          "shear_parallel_psi": 670,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9100,
+          "modulus_of_elasticity_million_psi": 1.45,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5360,
+          "compression_perpendicular_psi": 500,
+          "shear_parallel_psi": 980,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "ca-tamarack": {
+      "table": "5-4b",
+      "handbook_label": "Tamarack",
+      "scientific_name": null,
+      "group": "softwood",
+      "origin": "imported",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.48,
+          "modulus_of_rupture_psi": 6800,
+          "modulus_of_elasticity_million_psi": 1.24,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3130,
+          "compression_perpendicular_psi": 410,
+          "shear_parallel_psi": 920,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11000,
+          "modulus_of_elasticity_million_psi": 1.36,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6510,
+          "compression_perpendicular_psi": 900,
+          "shear_parallel_psi": 1300,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "afrormosia": {
+      "table": "5-5b",
+      "handbook_label": "Afrormosia (Pericopsis elata)",
+      "scientific_name": "Pericopsis elata",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.61,
+          "modulus_of_rupture_psi": 14800,
+          "modulus_of_elasticity_million_psi": 1.77,
+          "work_to_max_load_in_lbf_per_in3": 19.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7490,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1670,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1600
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18400,
+          "modulus_of_elasticity_million_psi": 1.94,
+          "work_to_max_load_in_lbf_per_in3": 18.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9940,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2090,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1560
+        }
+      }
+    },
+    "albarco": {
+      "table": "5-5b",
+      "handbook_label": "Albarco (Cariniana spp.)",
+      "scientific_name": "Cariniana spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.48,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 14500,
+          "modulus_of_elasticity_million_psi": 1.5,
+          "work_to_max_load_in_lbf_per_in3": 13.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6820,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2310,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1020
+        }
+      }
+    },
+    "andiroba": {
+      "table": "5-5b",
+      "handbook_label": "Andiroba (Carapa guianensis)",
+      "scientific_name": "Carapa guianensis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.54,
+          "modulus_of_rupture_psi": 10300,
+          "modulus_of_elasticity_million_psi": 1.69,
+          "work_to_max_load_in_lbf_per_in3": 9.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4780,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1220,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 880
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 15500,
+          "modulus_of_elasticity_million_psi": 2,
+          "work_to_max_load_in_lbf_per_in3": 14,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8120,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1510,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1130
+        }
+      }
+    },
+    "angelin": {
+      "table": "5-5b",
+      "handbook_label": "Angelin (Andirainermis)",
+      "scientific_name": "Andira inermis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.65,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18000,
+          "modulus_of_elasticity_million_psi": 2.49,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9200,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1840,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1750
+        }
+      }
+    },
+    "angelique": {
+      "table": "5-5b",
+      "handbook_label": "Angelique (Dicorynia guianensis)",
+      "scientific_name": "Dicorynia guianensis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.6,
+          "modulus_of_rupture_psi": 11400,
+          "modulus_of_elasticity_million_psi": 1.84,
+          "work_to_max_load_in_lbf_per_in3": 12,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5590,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1340,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1100
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 17400,
+          "modulus_of_elasticity_million_psi": 2.19,
+          "work_to_max_load_in_lbf_per_in3": 15.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8770,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1660,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1290
+        }
+      }
+    },
+    "avodire": {
+      "table": "5-5b",
+      "handbook_label": "Avodire (Turraeanthus africanus)",
+      "scientific_name": "Turraeanthus africanus",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.48,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 12700,
+          "modulus_of_elasticity_million_psi": 1.49,
+          "work_to_max_load_in_lbf_per_in3": 9.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7150,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2030,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1080
+        }
+      }
+    },
+    "azobe": {
+      "table": "5-5b",
+      "handbook_label": "Azobe (Lophira alata)",
+      "scientific_name": "Lophira alata",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.87,
+          "modulus_of_rupture_psi": 16900,
+          "modulus_of_elasticity_million_psi": 2.16,
+          "work_to_max_load_in_lbf_per_in3": 12,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9520,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2040,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2890
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 24500,
+          "modulus_of_elasticity_million_psi": 2.47,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 12600,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2960,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3350
+        }
+      }
+    },
+    "balsa": {
+      "table": "5-5b",
+      "handbook_label": "Balsa (Ochroma pyramidale)",
+      "scientific_name": "Ochroma pyramidale",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.16,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 3140,
+          "modulus_of_elasticity_million_psi": 0.49,
+          "work_to_max_load_in_lbf_per_in3": 2.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2160,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 300,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "banak": {
+      "table": "5-5b",
+      "handbook_label": "Banak (Virola spp.)",
+      "scientific_name": "Virola spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.42,
+          "modulus_of_rupture_psi": 5600,
+          "modulus_of_elasticity_million_psi": 1.64,
+          "work_to_max_load_in_lbf_per_in3": 4.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2390,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 720,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 320
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10900,
+          "modulus_of_elasticity_million_psi": 2.04,
+          "work_to_max_load_in_lbf_per_in3": 10,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5140,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 980,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 510
+        }
+      }
+    },
+    "benge": {
+      "table": "5-5b",
+      "handbook_label": "Benge (Guibourtia arnoldiana)",
+      "scientific_name": "Guibourtia arnoldiana",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.65,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 21400,
+          "modulus_of_elasticity_million_psi": 2.04,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 11400,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2090,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1750
+        }
+      }
+    },
+    "bubinga": {
+      "table": "5-5b",
+      "handbook_label": "Bubinga (Guibourtia spp.)",
+      "scientific_name": "Guibourtia spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.71,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 22600,
+          "modulus_of_elasticity_million_psi": 2.48,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10500,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 3110,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2690
+        }
+      }
+    },
+    "bulletwood": {
+      "table": "5-5b",
+      "handbook_label": "Bulletwood (Manilkara bidentata)",
+      "scientific_name": "Manilkara bidentata",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.85,
+          "modulus_of_rupture_psi": 17300,
+          "modulus_of_elasticity_million_psi": 2.7,
+          "work_to_max_load_in_lbf_per_in3": 13.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8690,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1900,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2230
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 27300,
+          "modulus_of_elasticity_million_psi": 3.45,
+          "work_to_max_load_in_lbf_per_in3": 28.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 11640,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2500,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3190
+        }
+      }
+    },
+    "cativo": {
+      "table": "5-5b",
+      "handbook_label": "Cativo (Prioria copaifera)",
+      "scientific_name": "Prioria copaifera",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.4,
+          "modulus_of_rupture_psi": 5900,
+          "modulus_of_elasticity_million_psi": 0.94,
+          "work_to_max_load_in_lbf_per_in3": 5.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2460,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 860,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 440
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 8600,
+          "modulus_of_elasticity_million_psi": 1.11,
+          "work_to_max_load_in_lbf_per_in3": 7.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4290,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1060,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 630
+        }
+      }
+    },
+    "ceiba": {
+      "table": "5-5b",
+      "handbook_label": "Ceiba (Ceiba pentandra)",
+      "scientific_name": "Ceiba pentandra",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.25,
+          "modulus_of_rupture_psi": 2200,
+          "modulus_of_elasticity_million_psi": 0.41,
+          "work_to_max_load_in_lbf_per_in3": 1.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 1060,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 350,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 220
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 4300,
+          "modulus_of_elasticity_million_psi": 0.54,
+          "work_to_max_load_in_lbf_per_in3": 2.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2380,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 550,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 240
+        }
+      }
+    },
+    "courbaril": {
+      "table": "5-5b",
+      "handbook_label": "Courbaril (Hymenaea courbaril)",
+      "scientific_name": "Hymenaea courbaril",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.71,
+          "modulus_of_rupture_psi": 12900,
+          "modulus_of_elasticity_million_psi": 1.84,
+          "work_to_max_load_in_lbf_per_in3": 14.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5800,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1770,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1970
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 19400,
+          "modulus_of_elasticity_million_psi": 2.16,
+          "work_to_max_load_in_lbf_per_in3": 17.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9510,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2470,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2350
+        }
+      }
+    },
+    "cuangare": {
+      "table": "5-5b",
+      "handbook_label": "Cuangare (Dialyanthera spp.)",
+      "scientific_name": "Dialyanthera spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.31,
+          "modulus_of_rupture_psi": 4000,
+          "modulus_of_elasticity_million_psi": 1.01,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2080,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 590,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 230
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7300,
+          "modulus_of_elasticity_million_psi": 1.52,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4760,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 830,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 380
+        }
+      }
+    },
+    "cypress-mexican": {
+      "table": "5-5b",
+      "handbook_label": "Cypress, Mexican (Cupressus lustianica)",
+      "scientific_name": "Cupressus lustianica",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.39,
+          "modulus_of_rupture_psi": 6200,
+          "modulus_of_elasticity_million_psi": 0.92,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2880,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 950,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 340
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10300,
+          "modulus_of_elasticity_million_psi": 1.02,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5380,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1580,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 460
+        }
+      }
+    },
+    "degame": {
+      "table": "5-5b",
+      "handbook_label": "Degame (Calycophyllum candidissimum)",
+      "scientific_name": "Calycophyllum candidissimum",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.67,
+          "modulus_of_rupture_psi": 14300,
+          "modulus_of_elasticity_million_psi": 1.93,
+          "work_to_max_load_in_lbf_per_in3": 18.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6200,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1660,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1630
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 22300,
+          "modulus_of_elasticity_million_psi": 2.27,
+          "work_to_max_load_in_lbf_per_in3": 27,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9670,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2120,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1940
+        }
+      }
+    },
+    "determa": {
+      "table": "5-5b",
+      "handbook_label": "Determa (Ocotea rubra)",
+      "scientific_name": "Ocotea rubra",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.52,
+          "modulus_of_rupture_psi": 7800,
+          "modulus_of_elasticity_million_psi": 1.46,
+          "work_to_max_load_in_lbf_per_in3": 4.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3760,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 860,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 520
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10500,
+          "modulus_of_elasticity_million_psi": 1.82,
+          "work_to_max_load_in_lbf_per_in3": 6.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5800,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 980,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 660
+        }
+      }
+    },
+    "ekop": {
+      "table": "5-5b",
+      "handbook_label": "Ekop (Tetraberlinia tubmaniana)",
+      "scientific_name": "Tetraberlinia tubmaniana",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.6,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16700,
+          "modulus_of_elasticity_million_psi": 2.21,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9010,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "goncalo-alves": {
+      "table": "5-5b",
+      "handbook_label": "Goncalo alves (Astronium graveolens)",
+      "scientific_name": "Astronium graveolens",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.84,
+          "modulus_of_rupture_psi": 12100,
+          "modulus_of_elasticity_million_psi": 1.94,
+          "work_to_max_load_in_lbf_per_in3": 6.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6580,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1760,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1910
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16600,
+          "modulus_of_elasticity_million_psi": 2.23,
+          "work_to_max_load_in_lbf_per_in3": 10.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10320,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1960,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2160
+        }
+      }
+    },
+    "greenheart": {
+      "table": "5-5b",
+      "handbook_label": "Greenheart (Chlorocardiumrodiei)",
+      "scientific_name": "Chlorocardium rodiei",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.8,
+          "modulus_of_rupture_psi": 19300,
+          "modulus_of_elasticity_million_psi": 2.47,
+          "work_to_max_load_in_lbf_per_in3": 10.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9380,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1930,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1880
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 24900,
+          "modulus_of_elasticity_million_psi": 3.25,
+          "work_to_max_load_in_lbf_per_in3": 25.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 12510,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2620,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2350
+        }
+      }
+    },
+    "hura": {
+      "table": "5-5b",
+      "handbook_label": "Hura (Hura crepitans)",
+      "scientific_name": "Hura crepitans",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.38,
+          "modulus_of_rupture_psi": 6300,
+          "modulus_of_elasticity_million_psi": 1.04,
+          "work_to_max_load_in_lbf_per_in3": 5.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2790,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 830,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 440
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 8700,
+          "modulus_of_elasticity_million_psi": 1.17,
+          "work_to_max_load_in_lbf_per_in3": 6.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4800,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1080,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 550
+        }
+      }
+    },
+    "ilomba": {
+      "table": "5-5b",
+      "handbook_label": "Ilomba (Pycnanthus angolensis)",
+      "scientific_name": "Pycnanthus angolensis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.4,
+          "modulus_of_rupture_psi": 5500,
+          "modulus_of_elasticity_million_psi": 1.14,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2900,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 840,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 470
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9900,
+          "modulus_of_elasticity_million_psi": 1.59,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5550,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1290,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 610
+        }
+      }
+    },
+    "ipe": {
+      "table": "5-5b",
+      "handbook_label": "Ipe (Tabebuia spp., lapacho group)",
+      "scientific_name": "Tabebuia spp., lapacho group",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.92,
+          "modulus_of_rupture_psi": 22600,
+          "modulus_of_elasticity_million_psi": 2.92,
+          "work_to_max_load_in_lbf_per_in3": 27.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10350,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2120,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3060
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 25400,
+          "modulus_of_elasticity_million_psi": 3.14,
+          "work_to_max_load_in_lbf_per_in3": 22,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 13010,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2060,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3680
+        }
+      }
+    },
+    "iroko": {
+      "table": "5-5b",
+      "handbook_label": "Iroko (Chlorophora spp.)",
+      "scientific_name": "Chlorophora spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.54,
+          "modulus_of_rupture_psi": 10200,
+          "modulus_of_elasticity_million_psi": 1.29,
+          "work_to_max_load_in_lbf_per_in3": 10.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4910,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1310,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1080
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 12400,
+          "modulus_of_elasticity_million_psi": 1.46,
+          "work_to_max_load_in_lbf_per_in3": 9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7590,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1800,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1260
+        }
+      }
+    },
+    "jarrah": {
+      "table": "5-5b",
+      "handbook_label": "Jarrah (Eucalyptus marginata)",
+      "scientific_name": "Eucalyptus marginata",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.67,
+          "modulus_of_rupture_psi": 9900,
+          "modulus_of_elasticity_million_psi": 1.48,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5190,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1320,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1290
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16200,
+          "modulus_of_elasticity_million_psi": 1.88,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8870,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2130,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1910
+        }
+      }
+    },
+    "jelutong": {
+      "table": "5-5b",
+      "handbook_label": "Jelutong (Dyera costulata)",
+      "scientific_name": "Dyera costulata",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.36,
+          "modulus_of_rupture_psi": 5600,
+          "modulus_of_elasticity_million_psi": 1.16,
+          "work_to_max_load_in_lbf_per_in3": 5.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3050,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 760,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 330
+        },
+        "15": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7300,
+          "modulus_of_elasticity_million_psi": 1.18,
+          "work_to_max_load_in_lbf_per_in3": 6.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3920,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 840,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 390
+        }
+      }
+    },
+    "kaneelhart": {
+      "table": "5-5b",
+      "handbook_label": "Kaneelhart (Licaria spp.)",
+      "scientific_name": "Licaria spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.96,
+          "modulus_of_rupture_psi": 22300,
+          "modulus_of_elasticity_million_psi": 3.82,
+          "work_to_max_load_in_lbf_per_in3": 13.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 13390,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1680,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2210
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 29900,
+          "modulus_of_elasticity_million_psi": 4.06,
+          "work_to_max_load_in_lbf_per_in3": 17.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 17400,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1970,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2900
+        }
+      }
+    },
+    "kapur": {
+      "table": "5-5b",
+      "handbook_label": "Kapur (Dryobalanops spp.)",
+      "scientific_name": "Dryobalanops spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.64,
+          "modulus_of_rupture_psi": 12800,
+          "modulus_of_elasticity_million_psi": 1.6,
+          "work_to_max_load_in_lbf_per_in3": 15.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6220,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1170,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 980
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18300,
+          "modulus_of_elasticity_million_psi": 1.88,
+          "work_to_max_load_in_lbf_per_in3": 18.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10090,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1990,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1230
+        }
+      }
+    },
+    "karri": {
+      "table": "5-5b",
+      "handbook_label": "Karri (Eucalyptus diversicolor)",
+      "scientific_name": "Eucalyptus diversicolor",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.82,
+          "modulus_of_rupture_psi": 11200,
+          "modulus_of_elasticity_million_psi": 1.94,
+          "work_to_max_load_in_lbf_per_in3": 11.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5450,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1510,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1360
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 20160,
+          "modulus_of_elasticity_million_psi": 2.6,
+          "work_to_max_load_in_lbf_per_in3": 25.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10800,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2420,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2040
+        }
+      }
+    },
+    "kempas": {
+      "table": "5-5b",
+      "handbook_label": "Kempas (Koompassia malaccensis)",
+      "scientific_name": "Koompassia malaccensis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.71,
+          "modulus_of_rupture_psi": 14500,
+          "modulus_of_elasticity_million_psi": 2.41,
+          "work_to_max_load_in_lbf_per_in3": 12.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7930,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1460,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1480
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 17700,
+          "modulus_of_elasticity_million_psi": 2.69,
+          "work_to_max_load_in_lbf_per_in3": 15.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9520,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1790,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1710
+        }
+      }
+    },
+    "keruing": {
+      "table": "5-5b",
+      "handbook_label": "Keruing (Dipterocarpus spp.)",
+      "scientific_name": "Dipterocarpus spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.69,
+          "modulus_of_rupture_psi": 11900,
+          "modulus_of_elasticity_million_psi": 1.71,
+          "work_to_max_load_in_lbf_per_in3": 13.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5680,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1170,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1060
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 19900,
+          "modulus_of_elasticity_million_psi": 2.07,
+          "work_to_max_load_in_lbf_per_in3": 23.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10500,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2070,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1270
+        }
+      }
+    },
+    "lignumvitae": {
+      "table": "5-5b",
+      "handbook_label": "Lignumvitae (Guaiacum spp.)",
+      "scientific_name": "Guaiacum spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 1.05,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 11400,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 4500
+        }
+      }
+    },
+    "limba": {
+      "table": "5-5b",
+      "handbook_label": "Limba (Terminalia superba)",
+      "scientific_name": "Terminalia superba",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.38,
+          "modulus_of_rupture_psi": 6000,
+          "modulus_of_elasticity_million_psi": 0.77,
+          "work_to_max_load_in_lbf_per_in3": 7.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2780,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 880,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 400
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 8800,
+          "modulus_of_elasticity_million_psi": 1.01,
+          "work_to_max_load_in_lbf_per_in3": 8.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4730,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1410,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 490
+        }
+      }
+    },
+    "macawood": {
+      "table": "5-5b",
+      "handbook_label": "Macawood (Platymiscium spp.)",
+      "scientific_name": "Platymiscium spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.94,
+          "modulus_of_rupture_psi": 22300,
+          "modulus_of_elasticity_million_psi": 3.02,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10540,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1840,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3320
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 27600,
+          "modulus_of_elasticity_million_psi": 3.2,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 16100,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2540,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3150
+        }
+      }
+    },
+    "mahogany-african": {
+      "table": "5-5b",
+      "handbook_label": "Mahogany, African (Khaya spp.)",
+      "scientific_name": "Khaya spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.42,
+          "modulus_of_rupture_psi": 7400,
+          "modulus_of_elasticity_million_psi": 1.15,
+          "work_to_max_load_in_lbf_per_in3": 7.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3730,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 931,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 640
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 10700,
+          "modulus_of_elasticity_million_psi": 1.4,
+          "work_to_max_load_in_lbf_per_in3": 8.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6460,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1500,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 830
+        }
+      }
+    },
+    "mahogany-true": {
+      "table": "5-5b",
+      "handbook_label": "Mahogany, true (Swietenia macrophylla)",
+      "scientific_name": "Swietenia macrophylla",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.45,
+          "modulus_of_rupture_psi": 9000,
+          "modulus_of_elasticity_million_psi": 1.34,
+          "work_to_max_load_in_lbf_per_in3": 9.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4340,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1240,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 740
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11500,
+          "modulus_of_elasticity_million_psi": 1.5,
+          "work_to_max_load_in_lbf_per_in3": 7.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6780,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1230,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 800
+        }
+      }
+    },
+    "manbarklak": {
+      "table": "5-5b",
+      "handbook_label": "Manbarklak (Eschweilera spp.)",
+      "scientific_name": "Eschweilera spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.87,
+          "modulus_of_rupture_psi": 17100,
+          "modulus_of_elasticity_million_psi": 2.7,
+          "work_to_max_load_in_lbf_per_in3": 17.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7340,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1630,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2280
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 26500,
+          "modulus_of_elasticity_million_psi": 3.14,
+          "work_to_max_load_in_lbf_per_in3": 33.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 11210,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2070,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3480
+        }
+      }
+    },
+    "manni": {
+      "table": "5-5b",
+      "handbook_label": "Manni (Symphonia globulifera)",
+      "scientific_name": "Symphonia globulifera",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.58,
+          "modulus_of_rupture_psi": 11200,
+          "modulus_of_elasticity_million_psi": 1.96,
+          "work_to_max_load_in_lbf_per_in3": 11.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5160,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1140,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 940
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16900,
+          "modulus_of_elasticity_million_psi": 2.46,
+          "work_to_max_load_in_lbf_per_in3": 16.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8820,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1420,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1120
+        }
+      }
+    },
+    "marishballi": {
+      "table": "5-5b",
+      "handbook_label": "Marishballi (Lincania spp.)",
+      "scientific_name": "Lincania spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.88,
+          "modulus_of_rupture_psi": 17100,
+          "modulus_of_elasticity_million_psi": 2.93,
+          "work_to_max_load_in_lbf_per_in3": 13.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7580,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1620,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2250
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 27700,
+          "modulus_of_elasticity_million_psi": 3.34,
+          "work_to_max_load_in_lbf_per_in3": 14.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 13390,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1750,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3570
+        }
+      }
+    },
+    "merbau": {
+      "table": "5-5b",
+      "handbook_label": "Merbau (Intsia spp.)",
+      "scientific_name": "Intsia spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.64,
+          "modulus_of_rupture_psi": 12900,
+          "modulus_of_elasticity_million_psi": 2.02,
+          "work_to_max_load_in_lbf_per_in3": 12.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6770,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1560,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1380
+        },
+        "15": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16800,
+          "modulus_of_elasticity_million_psi": 2.23,
+          "work_to_max_load_in_lbf_per_in3": 14.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8440,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1810,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1500
+        }
+      }
+    },
+    "mersawa": {
+      "table": "5-5b",
+      "handbook_label": "Mersawa (Anisoptera spp.)",
+      "scientific_name": "Anisoptera spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.52,
+          "modulus_of_rupture_psi": 8000,
+          "modulus_of_elasticity_million_psi": 1.77,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3960,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 740,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 880
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 13800,
+          "modulus_of_elasticity_million_psi": 2.28,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7370,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 890,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1290
+        }
+      }
+    },
+    "mora": {
+      "table": "5-5b",
+      "handbook_label": "Mora (Moraspp.)",
+      "scientific_name": "Mora spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.78,
+          "modulus_of_rupture_psi": 12600,
+          "modulus_of_elasticity_million_psi": 2.33,
+          "work_to_max_load_in_lbf_per_in3": 13.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6400,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1400,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1450
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 22100,
+          "modulus_of_elasticity_million_psi": 2.96,
+          "work_to_max_load_in_lbf_per_in3": 18.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 11840,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1900,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2300
+        }
+      }
+    },
+    "oak": {
+      "table": "5-5b",
+      "handbook_label": "Oak (Quercus spp.)",
+      "scientific_name": "Quercus spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.76,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 23000,
+          "modulus_of_elasticity_million_psi": 3.02,
+          "work_to_max_load_in_lbf_per_in3": 16.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2500
+        }
+      }
+    },
+    "obeche": {
+      "table": "5-5b",
+      "handbook_label": "Obeche (Triplochiton scleroxylon)",
+      "scientific_name": "Triplochiton scleroxylon",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.3,
+          "modulus_of_rupture_psi": 5100,
+          "modulus_of_elasticity_million_psi": 0.72,
+          "work_to_max_load_in_lbf_per_in3": 6.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2570,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 660,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 420
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7400,
+          "modulus_of_elasticity_million_psi": 0.86,
+          "work_to_max_load_in_lbf_per_in3": 6.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3930,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 990,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 430
+        }
+      }
+    },
+    "okoume": {
+      "table": "5-5b",
+      "handbook_label": "Okoume (Aucoumea klaineana)",
+      "scientific_name": "Aucoumea klaineana",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.33,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 7400,
+          "modulus_of_elasticity_million_psi": 1.14,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3970,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 970,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 380
+        }
+      }
+    },
+    "opepe": {
+      "table": "5-5b",
+      "handbook_label": "Opepe (Nauclea diderrichii)",
+      "scientific_name": "Nauclea diderrichii",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.63,
+          "modulus_of_rupture_psi": 13600,
+          "modulus_of_elasticity_million_psi": 1.73,
+          "work_to_max_load_in_lbf_per_in3": 12.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7480,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1900,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1520
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 17400,
+          "modulus_of_elasticity_million_psi": 1.94,
+          "work_to_max_load_in_lbf_per_in3": 14.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10400,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2480,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1630
+        }
+      }
+    },
+    "ovangkol": {
+      "table": "5-5b",
+      "handbook_label": "Ovangkol (Guibourtia ehie)",
+      "scientific_name": "Guibourtia ehie",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.67,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16900,
+          "modulus_of_elasticity_million_psi": 2.56,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8300,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "para-angelim": {
+      "table": "5-5b",
+      "handbook_label": "Para-angelim (Hymenolobium excelsum)",
+      "scientific_name": "Hymenolobium excelsum",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.63,
+          "modulus_of_rupture_psi": 14600,
+          "modulus_of_elasticity_million_psi": 1.95,
+          "work_to_max_load_in_lbf_per_in3": 12.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7460,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1600,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1720
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 17600,
+          "modulus_of_elasticity_million_psi": 2.05,
+          "work_to_max_load_in_lbf_per_in3": 15.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8990,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2010,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1720
+        }
+      }
+    },
+    "parana-pine": {
+      "table": "5-5b",
+      "handbook_label": "Parana-pine (Araucaria augustifolia)",
+      "scientific_name": "Araucaria augustifolia",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.46,
+          "modulus_of_rupture_psi": 7200,
+          "modulus_of_elasticity_million_psi": 1.35,
+          "work_to_max_load_in_lbf_per_in3": 9.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4010,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 970,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 560
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 13500,
+          "modulus_of_elasticity_million_psi": 1.61,
+          "work_to_max_load_in_lbf_per_in3": 12.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7660,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1730,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 780
+        }
+      }
+    },
+    "pau-marfim": {
+      "table": "5-5b",
+      "handbook_label": "Pau marfim (Balfourodendron riedelianum)",
+      "scientific_name": "Balfourodendron riedelianum",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.73,
+          "modulus_of_rupture_psi": 14400,
+          "modulus_of_elasticity_million_psi": 1.66,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6070,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "15": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18900,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8190,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "peroba-de-campos": {
+      "table": "5-5b",
+      "handbook_label": "Peroba de campos (Paratecoma peroba)",
+      "scientific_name": "Paratecoma peroba",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.62,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 15400,
+          "modulus_of_elasticity_million_psi": 1.77,
+          "work_to_max_load_in_lbf_per_in3": 10.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8880,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2130,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1600
+        }
+      }
+    },
+    "peroba-rosa": {
+      "table": "5-5b",
+      "handbook_label": "Peroba rosa (Aspidosperma spp., peroba group)",
+      "scientific_name": "Aspidosperma spp., peroba group",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.66,
+          "modulus_of_rupture_psi": 10900,
+          "modulus_of_elasticity_million_psi": 1.29,
+          "work_to_max_load_in_lbf_per_in3": 10.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5540,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1880,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1580
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 12100,
+          "modulus_of_elasticity_million_psi": 1.53,
+          "work_to_max_load_in_lbf_per_in3": 9.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7920,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2490,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1730
+        }
+      }
+    },
+    "pilon": {
+      "table": "5-5b",
+      "handbook_label": "Pilon (Hyeronima spp.)",
+      "scientific_name": "Hyeronima spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.65,
+          "modulus_of_rupture_psi": 10700,
+          "modulus_of_elasticity_million_psi": 1.88,
+          "work_to_max_load_in_lbf_per_in3": 8.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4960,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1200,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1220
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18200,
+          "modulus_of_elasticity_million_psi": 2.27,
+          "work_to_max_load_in_lbf_per_in3": 12.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9620,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1720,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1700
+        }
+      }
+    },
+    "pine-caribbean": {
+      "table": "5-5b",
+      "handbook_label": "Pine, Caribbean (Pinus caribaea)",
+      "scientific_name": "Pinus caribaea",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.68,
+          "modulus_of_rupture_psi": 11200,
+          "modulus_of_elasticity_million_psi": 1.88,
+          "work_to_max_load_in_lbf_per_in3": 10.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4900,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1170,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 980
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16700,
+          "modulus_of_elasticity_million_psi": 2.24,
+          "work_to_max_load_in_lbf_per_in3": 17.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8540,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2090,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1240
+        }
+      }
+    },
+    "pine-ocote": {
+      "table": "5-5b",
+      "handbook_label": "Pine, ocote (Pinus oocarpa)",
+      "scientific_name": "Pinus oocarpa",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.55,
+          "modulus_of_rupture_psi": 8000,
+          "modulus_of_elasticity_million_psi": 1.74,
+          "work_to_max_load_in_lbf_per_in3": 6.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3690,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1040,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 580
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 14900,
+          "modulus_of_elasticity_million_psi": 2.25,
+          "work_to_max_load_in_lbf_per_in3": 10.9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7680,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1720,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 910
+        }
+      }
+    },
+    "pine-radiata": {
+      "table": "5-5b",
+      "handbook_label": "Pine, radiata (Pinus radiata)",
+      "scientific_name": "Pinus radiata",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.42,
+          "modulus_of_rupture_psi": 6100,
+          "modulus_of_elasticity_million_psi": 1.18,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 2790,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 750,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 480
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11700,
+          "modulus_of_elasticity_million_psi": 1.48,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6080,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1600,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 750
+        }
+      }
+    },
+    "piquia": {
+      "table": "5-5b",
+      "handbook_label": "Piquia (Caryocar spp.)",
+      "scientific_name": "Caryocar spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.72,
+          "modulus_of_rupture_psi": 12400,
+          "modulus_of_elasticity_million_psi": 1.82,
+          "work_to_max_load_in_lbf_per_in3": 8.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6290,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1640,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1720
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 17000,
+          "modulus_of_elasticity_million_psi": 2.16,
+          "work_to_max_load_in_lbf_per_in3": 15.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8410,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1990,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1720
+        }
+      }
+    },
+    "primavera": {
+      "table": "5-5b",
+      "handbook_label": "Primavera (Tabebuia donnell–smithii)",
+      "scientific_name": "Tabebuia donnell–smithii",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.4,
+          "modulus_of_rupture_psi": 7200,
+          "modulus_of_elasticity_million_psi": 0.99,
+          "work_to_max_load_in_lbf_per_in3": 7.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3510,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1030,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 700
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9500,
+          "modulus_of_elasticity_million_psi": 1.04,
+          "work_to_max_load_in_lbf_per_in3": 6.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5600,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1390,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 660
+        }
+      }
+    },
+    "purpleheart": {
+      "table": "5-5b",
+      "handbook_label": "Purpleheart (Peltogyne spp.)",
+      "scientific_name": "Peltogyne spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.67,
+          "modulus_of_rupture_psi": 13700,
+          "modulus_of_elasticity_million_psi": 2,
+          "work_to_max_load_in_lbf_per_in3": 14.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7020,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1640,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1810
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 19200,
+          "modulus_of_elasticity_million_psi": 2.27,
+          "work_to_max_load_in_lbf_per_in3": 17.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10320,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2220,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1860
+        }
+      }
+    },
+    "ramin": {
+      "table": "5-5b",
+      "handbook_label": "Ramin (Gonystylus bancanus)",
+      "scientific_name": "Gonystylus bancanus",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.52,
+          "modulus_of_rupture_psi": 9800,
+          "modulus_of_elasticity_million_psi": 1.57,
+          "work_to_max_load_in_lbf_per_in3": 9,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5390,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 990,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 640
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18500,
+          "modulus_of_elasticity_million_psi": 2.17,
+          "work_to_max_load_in_lbf_per_in3": 17,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10080,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1520,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1300
+        }
+      }
+    },
+    "robe": {
+      "table": "5-5b",
+      "handbook_label": "Robe (Tabebuia spp., roble group)",
+      "scientific_name": "Tabebuia spp., roble group",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.52,
+          "modulus_of_rupture_psi": 10800,
+          "modulus_of_elasticity_million_psi": 1.45,
+          "work_to_max_load_in_lbf_per_in3": 11.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4910,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1250,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 910
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 13800,
+          "modulus_of_elasticity_million_psi": 1.6,
+          "work_to_max_load_in_lbf_per_in3": 12.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7340,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1450,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 960
+        }
+      }
+    },
+    "rosewood-brazilian": {
+      "table": "5-5b",
+      "handbook_label": "Rosewood, Brazilian (Dalbergia nigra)",
+      "scientific_name": "Dalbergia nigra",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.8,
+          "modulus_of_rupture_psi": 14100,
+          "modulus_of_elasticity_million_psi": 1.84,
+          "work_to_max_load_in_lbf_per_in3": 13.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5510,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2360,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2440
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 19000,
+          "modulus_of_elasticity_million_psi": 1.88,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9600,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2110,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2720
+        }
+      }
+    },
+    "rosewood-indian": {
+      "table": "5-5b",
+      "handbook_label": "Rosewood, Indian (Dalbergia latifolia)",
+      "scientific_name": "Dalbergia latifolia",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.75,
+          "modulus_of_rupture_psi": 9200,
+          "modulus_of_elasticity_million_psi": 1.19,
+          "work_to_max_load_in_lbf_per_in3": 11.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4530,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1400,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1560
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 16900,
+          "modulus_of_elasticity_million_psi": 1.78,
+          "work_to_max_load_in_lbf_per_in3": 13.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9220,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2090,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 3170
+        }
+      }
+    },
+    "sande": {
+      "table": "5-5b",
+      "handbook_label": "Sande (Brosimum spp., utile group)",
+      "scientific_name": "Brosimum spp., utile group",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.49,
+          "modulus_of_rupture_psi": 8500,
+          "modulus_of_elasticity_million_psi": 1.94,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4490,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1040,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 600
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 14300,
+          "modulus_of_elasticity_million_psi": 2.39,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8220,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1290,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 900
+        }
+      }
+    },
+    "santa-maria": {
+      "table": "5-5b",
+      "handbook_label": "Santa Maria (Calophyllum brasiliense)",
+      "scientific_name": "Calophyllum brasiliense",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.52,
+          "modulus_of_rupture_psi": 10500,
+          "modulus_of_elasticity_million_psi": 1.59,
+          "work_to_max_load_in_lbf_per_in3": 12.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4560,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1260,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 890
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 14600,
+          "modulus_of_elasticity_million_psi": 1.83,
+          "work_to_max_load_in_lbf_per_in3": 16.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6910,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2080,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1150
+        }
+      }
+    },
+    "sapele": {
+      "table": "5-5b",
+      "handbook_label": "Sapele (Entandrophragma cylindricum)",
+      "scientific_name": "Entandrophragma cylindricum",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AF",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.55,
+          "modulus_of_rupture_psi": 10200,
+          "modulus_of_elasticity_million_psi": 1.49,
+          "work_to_max_load_in_lbf_per_in3": 10.5,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5010,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1250,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1020
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 15300,
+          "modulus_of_elasticity_million_psi": 1.82,
+          "work_to_max_load_in_lbf_per_in3": 15.7,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8160,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2260,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1510
+        }
+      }
+    },
+    "sepetir": {
+      "table": "5-5b",
+      "handbook_label": "Sepetir (Pseudosindorapalustris)",
+      "scientific_name": "Pseudosindora palustris",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.56,
+          "modulus_of_rupture_psi": 11200,
+          "modulus_of_elasticity_million_psi": 1.57,
+          "work_to_max_load_in_lbf_per_in3": 13.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5460,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1310,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 950
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 17200,
+          "modulus_of_elasticity_million_psi": 1.97,
+          "work_to_max_load_in_lbf_per_in3": 13.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8880,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2030,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1410
+        }
+      }
+    },
+    "shorea": {
+      "table": "5-5b",
+      "handbook_label": "Shorea (Shorea spp., bullau group)",
+      "scientific_name": "Shorea spp., bullau group",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.68,
+          "modulus_of_rupture_psi": 11700,
+          "modulus_of_elasticity_million_psi": 2.1,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5380,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1440,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1350
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 18800,
+          "modulus_of_elasticity_million_psi": 2.61,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10180,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 2190,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1780
+        }
+      }
+    },
+    "shorea-lauan-meranti-group-dark-red-meranti": {
+      "table": "5-5b",
+      "handbook_label": "Shorea, lauan–meranti group, Dark red meranti",
+      "scientific_name": null,
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.46,
+          "modulus_of_rupture_psi": 9400,
+          "modulus_of_elasticity_million_psi": 1.5,
+          "work_to_max_load_in_lbf_per_in3": 8.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4720,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1110,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 700
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 12700,
+          "modulus_of_elasticity_million_psi": 1.77,
+          "work_to_max_load_in_lbf_per_in3": 13.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 7360,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1450,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 780
+        }
+      }
+    },
+    "shorea-lauan-meranti-group-light-red-meranti": {
+      "table": "5-5b",
+      "handbook_label": "Shorea, lauan–meranti group, Light red meranti",
+      "scientific_name": null,
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.34,
+          "modulus_of_rupture_psi": 6600,
+          "modulus_of_elasticity_million_psi": 1.04,
+          "work_to_max_load_in_lbf_per_in3": 6.2,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3330,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 710,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 440
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 9500,
+          "modulus_of_elasticity_million_psi": 1.23,
+          "work_to_max_load_in_lbf_per_in3": 8.6,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5920,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 970,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 460
+        }
+      }
+    },
+    "shorea-lauan-meranti-group-white-meranti": {
+      "table": "5-5b",
+      "handbook_label": "Shorea, lauan–meranti group, White meranti",
+      "scientific_name": null,
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.55,
+          "modulus_of_rupture_psi": 9800,
+          "modulus_of_elasticity_million_psi": 1.3,
+          "work_to_max_load_in_lbf_per_in3": 8.3,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5490,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1320,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1000
+        },
+        "15": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 12400,
+          "modulus_of_elasticity_million_psi": 1.49,
+          "work_to_max_load_in_lbf_per_in3": 11.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6350,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1540,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1140
+        }
+      }
+    },
+    "shorea-lauan-meranti-group-yellow-meranti": {
+      "table": "5-5b",
+      "handbook_label": "Shorea, lauan–meranti group, Yellow meranti",
+      "scientific_name": null,
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.46,
+          "modulus_of_rupture_psi": 8000,
+          "modulus_of_elasticity_million_psi": 1.3,
+          "work_to_max_load_in_lbf_per_in3": 8.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3880,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1030,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 750
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11400,
+          "modulus_of_elasticity_million_psi": 1.55,
+          "work_to_max_load_in_lbf_per_in3": 10.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5900,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1520,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 770
+        }
+      }
+    },
+    "spanish-cedar": {
+      "table": "5-5b",
+      "handbook_label": "Spanish-cedar (Cedrela spp.)",
+      "scientific_name": "Cedrela spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.41,
+          "modulus_of_rupture_psi": 7500,
+          "modulus_of_elasticity_million_psi": 1.31,
+          "work_to_max_load_in_lbf_per_in3": 7.1,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 3370,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 990,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 550
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 11500,
+          "modulus_of_elasticity_million_psi": 1.44,
+          "work_to_max_load_in_lbf_per_in3": 9.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 6210,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1100,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 600
+        }
+      }
+    },
+    "sucupira-bowdichia": {
+      "table": "5-5b",
+      "handbook_label": "Sucupira (Bowdichia spp.)",
+      "scientific_name": "Bowdichia spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.74,
+          "modulus_of_rupture_psi": 17200,
+          "modulus_of_elasticity_million_psi": 2.27,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 9730,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        },
+        "15": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 19400,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 11100,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "sucupira-diplotropis": {
+      "table": "5-5b",
+      "handbook_label": "Sucupira (Diplotropis purpurea)",
+      "scientific_name": "Diplotropis purpurea",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.78,
+          "modulus_of_rupture_psi": 17400,
+          "modulus_of_elasticity_million_psi": 2.68,
+          "work_to_max_load_in_lbf_per_in3": 13,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8020,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1800,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1980
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 20600,
+          "modulus_of_elasticity_million_psi": 2.87,
+          "work_to_max_load_in_lbf_per_in3": 14.8,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 12140,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1960,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2140
+        }
+      }
+    },
+    "teak": {
+      "table": "5-5b",
+      "handbook_label": "Teak (Tectona grandis)",
+      "scientific_name": "Tectona grandis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AS",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.55,
+          "modulus_of_rupture_psi": 11600,
+          "modulus_of_elasticity_million_psi": 1.37,
+          "work_to_max_load_in_lbf_per_in3": 13.4,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 5960,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1290,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 930
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 14600,
+          "modulus_of_elasticity_million_psi": 1.55,
+          "work_to_max_load_in_lbf_per_in3": 12,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8410,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1890,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1000
+        }
+      }
+    },
+    "tornillo": {
+      "table": "5-5b",
+      "handbook_label": "Tornillo (Cedrelinga cateniformis)",
+      "scientific_name": "Cedrelinga cateniformis",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.45,
+          "modulus_of_rupture_psi": 8400,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 4100,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": 1170,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 870
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": null,
+          "modulus_of_elasticity_million_psi": null,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": null,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": null
+        }
+      }
+    },
+    "wallaba": {
+      "table": "5-5b",
+      "handbook_label": "Wallaba (Eperua spp.)",
+      "scientific_name": "Eperua spp.",
+      "group": null,
+      "origin": "imported",
+      "sample_origin": "AM",
+      "properties": {
+        "green": {
+          "specific_gravity": 0.78,
+          "modulus_of_rupture_psi": 14300,
+          "modulus_of_elasticity_million_psi": 2.33,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 8040,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 1540
+        },
+        "12": {
+          "specific_gravity": null,
+          "modulus_of_rupture_psi": 19100,
+          "modulus_of_elasticity_million_psi": 2.28,
+          "work_to_max_load_in_lbf_per_in3": null,
+          "impact_bending_in": null,
+          "compression_parallel_psi": 10760,
+          "compression_perpendicular_psi": null,
+          "shear_parallel_psi": null,
+          "tension_perpendicular_psi": null,
+          "side_hardness_lbf": 2040
         }
       }
     }
