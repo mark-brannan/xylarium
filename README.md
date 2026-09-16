@@ -28,9 +28,12 @@ fixtures that pin them.
 
 ## What is in it
 
-`data/species.json` — **Table 5-3b**, chapter 5: 113 species grown in the
-United States, each in two moisture states (`green` and `12`), each with ten
-properties:
+`data/species.json` — chapter 5, inch-pound: **Table 5-3b** (113 species
+grown in the United States), **Table 5-4b** (27 grown in Canada) and
+**Table 5-5b** (80 imported from elsewhere). Each row carries the `table` it
+came from, an `origin` (`us` or `imported`), the green state and the one
+conditioned state its table prints — `12`, or `15` for five Table 5-5b rows
+— and these ten properties:
 
 | field | what it is |
 |---|---|
@@ -45,9 +48,17 @@ properties:
 | `tension_perpendicular_psi` | maximum tensile strength |
 | `side_hardness_lbf` | modified Janka, load perpendicular to grain |
 
-A `null` is the Handbook's own dash — a cell it does not print. A missing
-key is a bug. Every field name carries its unit, because a number that
-leaves this package without its unit is a hazard.
+A `null` is the Handbook's own dash, or a column that table does not print
+at all: 5-4b prints no work, impact bending, tension perpendicular or side
+hardness, and 5-5b prints no impact bending or perpendicular values. A
+missing key is a bug. Every field name carries its unit, because a number
+that leaves this package without its unit is a hazard.
+
+`group` is `null` on Table 5-5b rows because that table prints no
+hardwood/softwood split, and `scientific_name` is filled only on Table 5-5b
+rows because that is the only one of the three that prints a botanical name.
+5-5b rows also carry `sample_origin` — `AF`, `AM` or `AS`, the table's own
+column.
 
 ## Read this before you use the numbers
 
@@ -65,23 +76,28 @@ estimating. Do not size a beam with them.
 
 Table 5-3b is the primary table. The metric Table 5-3a was converted from
 it — 5-3a's own footnote a says so. So inch-pound is what this package
-transcribes, at the Handbook's printed precision, and 5-3a is used as an
-independent oracle rather than as a second source: converting a transcribed
-5-3b cell must land within 5-3a's printed rounding, and a mis-keyed digit
-will not. `npm test` runs that check over 400 cells.
+transcribes, at the Handbook's printed precision. The metric printing of
+each table is an independent oracle, not a second source: converting a
+transcribed cell must land on what the metric table prints, and a mis-keyed
+digit will not. `npm test` runs that check over 800 cells.
+
+Tables 5-4 and 5-5 declare no such derivation — neither printing says it
+came from the other — so there the check allows both printings' rounding,
+not just the metric one's.
 
 Consumers wanting SI convert. The factors are in
 `fixtures/species-fixtures.json` under `conversion`.
 
 ### Where the Handbook disagrees with itself
 
-In 21 of the 2,125 cells the two tables are not a rounding of each other —
-5-3a prints rock elm's side hardness as a dash where 5-3b prints 940 lbf;
-western white pine's specific gravities are 0.36/0.35 in 5-3a and 0.35/0.38
-in 5-3b. **5-3b wins**, because 5-3a was derived from it. The disagreements
-are listed in full under `handbook_internal_disagreements` in the fixtures
-file, and a test pins that list to the data so neither can drift from the
-other.
+In 24 of the 3,337 printed cells the two printings of a table are not a
+rounding of each other — 5-3a prints rock elm's side hardness as a dash
+where 5-3b prints 940 lbf; 5-4a prints Pacific silver fir's shear at 12% as
+7,500 kPa where 5-4b's 1,190 lbf in-2 converts to 8,205. **The inch-pound
+printing wins.** Three row labels are spelled differently too (5-5a's
+*Llomba* for 5-5b's *Ilomba*, among them). All of it is listed under
+`handbook_internal_disagreements` in the fixtures file, and a test pins that
+list to the data so neither can drift from the other.
 
 They are recorded, not reconciled. Correcting the Forest Products
 Laboratory is not this package's job.
@@ -97,8 +113,10 @@ binomials and because the Handbook's four Douglas-fir rows are one binomial
 with four sets of measured values. `docs/identifiers.md` has the full
 argument and the rules for what happens when a row is renamed or split.
 
-Scientific names are `null` today: Table 5-3 prints none, and they will be
-filled from a cited source rather than from anyone's memory.
+Canadian rows are prefixed `ca-`, because Tables 5-3b and 5-4b both print
+an "Aspen, Quaking" row and they are different trees. Scientific names are
+`null` wherever the table prints none, and will be filled from a cited
+source rather than from anyone's memory.
 
 ## Verification
 
@@ -108,7 +126,8 @@ npm ci && npm test
 
 - every data file validates against its schema (`schema/`, draft 2020-12,
   `additionalProperties: false`);
-- all 113 rows present, every property key in both moisture states;
+- every row of all three tables present, every property key in both moisture
+  states;
 - the round-trip oracle above;
 - spot-check lookups against the printed table, including a cell that is a
   dash and a species that is deliberately absent.
@@ -130,11 +149,10 @@ copyrighted. They are out of scope here and always will be — see
 
 ## Not yet transcribed
 
-Tables 5-4b and 5-5b (Canadian and other imports), chapter 4 shrinkage and
-equilibrium moisture content, chapter 6 nominal-to-dressed lumber sizes, and
-the chapter 8 fastener equations. The plan for each, with table numbers
-already verified against the PDFs, is in `docs/adr/0001-name-and-scope.md`
-§2.
+Chapter 4 shrinkage and equilibrium moisture content, chapter 6
+nominal-to-dressed lumber sizes, and the chapter 8 fastener equations. The
+plan for each, with table numbers already verified against the PDFs, is in
+`docs/adr/0001-name-and-scope.md` §2.
 
 ## Licence
 
