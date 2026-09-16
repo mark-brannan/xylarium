@@ -48,8 +48,9 @@ Three things the imports tables added to that recipe, all of them likewise
 history:
 
 - **Table 5-4b rows take a `ca-` prefix.** Tables 5-3b and 5-4b both print
-  an "Aspen, Quaking" row, measured in different countries, and 26 of 5-4b's
-  27 labels collide that way. `ca-aspen-quaking` is a Canadian row.
+  an "Aspen, Quaking" row, measured in different countries, and 25 of 5-4b's
+  27 labels collide that way (a 26th differs only in case; 5-3b prints no
+  bare "Douglas-fir"). `ca-aspen-quaking` is a Canadian row.
 - **Table 5-5b ids come from the common name only.** The row label prints
   the botanical name beside it — "Afrormosia (Pericopsis elata)" — and the
   binomial stays out of the key, for the reasons above. Two rows print the
