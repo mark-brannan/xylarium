@@ -254,17 +254,25 @@ as colregs does; the reference is a test, not an export.
 
 Repo `mark-brannan/xylarium`, created 2026-09-15. This file is its ADR 0001.
 
-## What the first build session landed
+## What the build sessions have landed
 
-`docs/identifiers.md`, `schema/species.schema.json`, and Table 5-3b
-transcribed into `data/species.json` — 113 US-grown species, both moisture
-states, ten properties each. Table 5-3a is the fixture oracle per §3, not
-data: `fixtures/species-fixtures.json` carries the round-trip and lookup
-fixtures, and records the 21 cells where the Handbook's own two tables
-disagree beyond 5-3a's printed rounding. 5-3b is canonical there, per §3.
+`docs/identifiers.md`, `schema/species.schema.json`, and the three chapter 5
+inch-pound species tables transcribed into `data/species.json` — 5-3b (113
+US-grown), 5-4b (27 Canadian) and 5-5b (80 other imports), 220 rows. The
+metric printings are fixture oracles per §3, not data:
+`fixtures/species-fixtures.json` carries the round-trip and lookup fixtures
+and records the 24 cells, and three row labels, where the Handbook's two
+printings of a table disagree. The inch-pound printing is canonical there,
+per §3.
 
-Not yet done, in the order §2 and §3 put them: Tables 5-4b and 5-5b
-(imports), the chapter 4 datasets, chapter 6 lumber sizes, chapter 8
-fasteners. Scientific names are null throughout — Table 5-3 prints none, and
-they will come from a cited source rather than from memory. The derived
+Two things §3 did not anticipate. Tables 5-4 and 5-5 declare no derivation
+between their printings, so the round-trip tolerance there allows both
+printings' rounding rather than only the metric one's. And five Table 5-5b
+rows print a 15% conditioned state instead of 12%, so `properties` carries
+green plus whichever one state its row prints.
+
+Not yet done, in the order §2 puts them: the chapter 4 datasets, chapter 6
+lumber sizes, chapter 8 fasteners. Scientific names are filled only on 5-5b
+rows, the only table of the three that prints a botanical name, and null on
+its four lauan–meranti sub-rows, which print none. The derived
 density fixture in §3 waits on the chapter 4 relation.
