@@ -26,11 +26,13 @@ const PROPERTIES = [
   'tension_perpendicular_psi',
   'side_hardness_lbf',
 ]
-const MOISTURE = ['green', '12']
+// Every row prints green plus exactly one conditioned state. Most print 12%;
+// five Table 5-5b rows print 15% instead.
+const CONDITIONED = ['12', '15']
 
-// Table 5-3b prints 113 rows of US-grown species. A transcription that gained
-// or lost a row is a transcription that needs looking at, not a test to relax.
-const ROW_COUNT = 113
+// Rows per transcribed table. A transcription that gained or lost a row is a
+// transcription that needs looking at, not a test to relax.
+const ROW_COUNT = { '5-3b': 113, '5-4b': 27, '5-5b': 80 }
 
 test('data/species.json validates against schema/species.schema.json', () => {
   const ajv = new Ajv({ allErrors: true, strict: false })
@@ -39,18 +41,46 @@ test('data/species.json validates against schema/species.schema.json', () => {
   assert.ok(ok, ajv.errorsText(validate.errors, { separator: '\n' }))
 })
 
-test('every row of Table 5-3b is present', () => {
-  assert.equal(Object.keys(data.species).length, ROW_COUNT)
+// The per-table rules live in the schema, not only in the tests below: a
+// consumer holding the data file and the schema alone must be told that a
+// 5-3b row carries no sample origin and a 5-5b row must.
+test('schema rejects fields a row\'s table does not print', () => {
+  const ajv = new Ajv({ allErrors: true, strict: false })
+  const validate = ajv.compile(schema)
+  const clone = (id) => JSON.parse(JSON.stringify(data.species[id]))
+  const withRow = (id, row) => ({ ...data, species: { [id]: row } })
+  const us = clone('alder-red')
+  us.sample_origin = 'AM'
+  assert.ok(!validate(withRow('alder-red', us)), 'a 5-3b row with a sample origin')
+  const imported = clone('afrormosia')
+  delete imported.sample_origin
+  assert.ok(!validate(withRow('afrormosia', imported)), 'a 5-5b row without a sample origin')
+  imported.sample_origin = 'AF'
+  imported.group = 'hardwood'
+  assert.ok(!validate(withRow('afrormosia', imported)), 'a 5-5b row with a group')
+})
+
+test('every row of every transcribed table is present', () => {
+  const counted = {}
+  for (const s of Object.values(data.species)) {
+    counted[s.table] = (counted[s.table] ?? 0) + 1
+  }
+  assert.deepEqual(counted, ROW_COUNT)
 })
 
 test('every species carries every property in both moisture states', () => {
   for (const [id, s] of Object.entries(data.species)) {
     // Compared as a set: "12" is an array-index-like key, so V8 orders it
     // ahead of "green" on parse whatever the file says.
-    assert.deepEqual(
-      Object.keys(s.properties).sort(), [...MOISTURE].sort(), `${id}: moisture states`,
+    const states = Object.keys(s.properties).sort()
+    assert.equal(states.length, 2, `${id}: moisture states`)
+    assert.ok(states.includes('green'), `${id}: no green state`)
+    const conditioned = states.find((k) => k !== 'green')
+    assert.ok(
+      CONDITIONED.includes(conditioned),
+      `${id}: unexpected moisture state ${conditioned}`,
     )
-    for (const mc of MOISTURE) {
+    for (const mc of ['green', conditioned]) {
       for (const p of PROPERTIES) {
         // A missing key is a schema error; a null is the Handbook's own dash.
         assert.ok(p in s.properties[mc], `${id}/${mc}: missing ${p}`)
@@ -59,56 +89,97 @@ test('every species carries every property in both moisture states', () => {
   }
 })
 
-test('species ids are opaque slugs and handbook labels are unique', () => {
+// A label is unique only within its table: Table 5-3b and Table 5-4b both
+// print an "Aspen, Quaking" row, and they are different measurements of
+// different trees.
+test('species ids are opaque slugs and handbook labels are unique per table', () => {
   const labels = new Set()
   for (const [id, s] of Object.entries(data.species)) {
     assert.match(id, /^[a-z0-9]+(-[a-z0-9]+)*$/, `${id}: not a slug`)
-    assert.ok(!labels.has(s.handbook_label), `duplicate label: ${s.handbook_label}`)
-    labels.add(s.handbook_label)
+    const key = `${s.table}|${s.handbook_label}`
+    assert.ok(!labels.has(key), `duplicate label: ${key}`)
+    labels.add(key)
   }
 })
 
-test('Table 5-3 covers US-grown species only', () => {
+// Origin is the Handbook's own split: Table 5-3 covers woods grown in the
+// United States, 5-4 and 5-5 cover imports.
+test('origin follows the table the row came from', () => {
+  const expected = { '5-3b': 'us', '5-4b': 'imported', '5-5b': 'imported' }
   for (const [id, s] of Object.entries(data.species)) {
-    assert.equal(s.origin, 'us', `${id}: origin`)
+    assert.equal(s.origin, expected[s.table], `${id}: origin`)
   }
 })
 
-// The transcription check. Table 5-3b (inch-pound) is what this package
-// carries; Table 5-3a is the same data printed in SI, converted from 5-3b per
-// its own footnote a. Converting a transcribed cell must therefore land within
-// 5-3a's printed rounding — and a mis-keyed digit will not.
-test('round-trip: converting 5-3b lands on what 5-3a prints', () => {
-  const conv = fixtures.conversion.by_property
+// Table 5-5 prints no hardwood/softwood split and Tables 5-3 and 5-4 print no
+// binomials. Null here is the table's silence, not a gap to fill in from
+// memory.
+test('group and scientific_name are present exactly where the table prints them', () => {
+  for (const [id, s] of Object.entries(data.species)) {
+    if (s.table === '5-5b') {
+      assert.equal(s.group, null, `${id}: Table 5-5 prints no group`)
+      assert.ok('sample_origin' in s, `${id}: Table 5-5b prints a sample origin`)
+      assert.match(s.sample_origin, /^(AF|AM|AS)$/, `${id}: sample_origin`)
+      if (s.handbook_label.startsWith('Shorea, lauan–meranti group, ')) {
+        assert.equal(s.scientific_name, null, `${id}: the lauan–meranti sub-rows print no binomial`)
+      } else {
+        // The label prints the binomial in parentheses; the two fields must
+        // agree, spacing included, or one of them is an extraction artifact.
+        assert.equal(typeof s.scientific_name, 'string', `${id}: 5-5b prints a binomial`)
+        assert.ok(
+          s.handbook_label.includes(`(${s.scientific_name}`),
+          `${id}: scientific_name ${s.scientific_name} is not in ${s.handbook_label}`,
+        )
+      }
+    } else {
+      assert.ok(['hardwood', 'softwood'].includes(s.group), `${id}: group`)
+      assert.equal(s.scientific_name, null, `${id}: ${s.table} prints no binomial`)
+      assert.ok(!('sample_origin' in s), `${id}: ${s.table} prints no sample origin`)
+    }
+  }
+})
+
+// The transcription check. What this package carries is the inch-pound
+// printing of each table; the Handbook prints the same rows again in metric.
+// Converting a transcribed cell must land on what the metric table prints,
+// within the two printings' combined rounding — and a mis-keyed digit will not.
+test('round-trip: converting a transcribed cell lands on the metric printing', () => {
   let checked = 0
   for (const c of fixtures.round_trip) {
     const s = data.species[c.species]
     assert.ok(s, `unknown species in fixture: ${c.species}`)
+    const oracle = fixtures.conversion.table_oracle[s.table]
+    const conv = fixtures.conversion.by_table[oracle]
+    assert.deepEqual(
+      Object.keys(c.metric).sort(),
+      Object.values(conv).map((v) => v.metric_property).sort(),
+      `${c.species}/${c.moisture}: fixture does not cover ${oracle}'s columns`,
+    )
     for (const [prop, { metric_property, factor, tolerance }] of Object.entries(conv)) {
       const ip = s.properties[c.moisture][prop]
       const si = c.metric[metric_property]
       assert.equal(
         ip === null, si === null,
-        `${c.species}/${c.moisture}/${prop}: 5-3b ${ip} but 5-3a ${si}`,
+        `${c.species}/${c.moisture}/${prop}: ${s.table} ${ip} but ${oracle} ${si}`,
       )
       if (ip === null) continue
       const delta = Math.abs(ip * factor - si)
       assert.ok(
         delta <= tolerance,
         `${c.species}/${c.moisture}/${prop}: ${ip} -> ${(ip * factor).toFixed(1)}, ` +
-          `5-3a prints ${si} (off by ${delta.toFixed(1)}, tolerance ${tolerance})`,
+          `${oracle} prints ${si} (off by ${delta.toFixed(1)}, tolerance ${tolerance})`,
       )
       checked++
     }
   }
-  assert.ok(checked > 300, `only ${checked} cells round-tripped`)
+  assert.ok(checked > 750, `only ${checked} cells round-tripped`)
 })
 
 test('lookup: spot checks against the printed table', () => {
   for (const c of fixtures.lookup) {
     const s = data.species[c.species]
     if (c.absent) {
-      assert.equal(s, undefined, `${c.species} should not be in Table 5-3b`)
+      assert.equal(s, undefined, `${c.species} should not be in any transcribed table`)
       continue
     }
     assert.ok(s, `unknown species in fixture: ${c.species}`)
@@ -119,19 +190,37 @@ test('lookup: spot checks against the printed table', () => {
   }
 })
 
-// Where the Handbook's own two tables disagree, 5-3b wins and the
-// disagreement is recorded rather than reconciled. This pins that record to
-// the data: if a future edit "fixes" one of these cells towards 5-3a, the
-// fixture stops describing the file and this fails.
+// Where the Handbook's own two printings of a table disagree, the inch-pound
+// printing wins and the disagreement is recorded rather than reconciled. This
+// pins that record to the data: if a future edit "fixes" one of these cells
+// towards the metric printing, the fixture stops describing the file and this
+// fails.
 test('recorded disagreements still describe the data', () => {
   const cells = fixtures.handbook_internal_disagreements.cells
   assert.ok(cells.length > 0)
   for (const c of cells) {
     const s = data.species[c.species]
     assert.ok(s, `unknown species in disagreement list: ${c.species}`)
+    assert.equal(s.table, c.canonical_table, `${c.species}: table`)
     assert.equal(
-      s.properties[c.moisture][c.property], c.table_5_3b,
-      `${c.species}/${c.moisture}/${c.property}: data no longer matches the recorded 5-3b value`,
+      s.properties[c.moisture][c.property], c.canonical,
+      `${c.species}/${c.moisture}/${c.property}: data no longer matches the ` +
+        `recorded ${c.canonical_table} value`,
+    )
+  }
+})
+
+// The labels the two printings spell differently. handbook_label carries the
+// inch-pound spelling; this keeps the metric spelling findable rather than
+// quietly reconciled away.
+test('recorded label disagreements still describe the data', () => {
+  for (const c of fixtures.handbook_internal_disagreements.labels) {
+    const s = data.species[c.species]
+    assert.ok(s, `unknown species in label disagreement list: ${c.species}`)
+    const printed = c[`table_${s.table.replace('-', '_')}`]
+    assert.ok(
+      s.handbook_label === printed || s.handbook_label.endsWith(`, ${printed}`),
+      `${c.species}: handbook_label ${s.handbook_label} is not ${printed}`,
     )
   }
 })

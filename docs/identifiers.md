@@ -44,6 +44,21 @@ hyphen:
 Grouping the heading first is deliberate: it sorts the table's own families
 together, so `oak-white-*` and `pine-*` are contiguous.
 
+Three things the imports tables added to that recipe, all of them likewise
+history:
+
+- **Table 5-4b rows take a `ca-` prefix.** Tables 5-3b and 5-4b both print
+  an "Aspen, Quaking" row, measured in different countries, and 25 of 5-4b's
+  27 labels collide that way (a 26th differs only in case; 5-3b prints no
+  bare "Douglas-fir"). `ca-aspen-quaking` is a Canadian row.
+- **Table 5-5b ids come from the common name only.** The row label prints
+  the botanical name beside it — "Afrormosia (Pericopsis elata)" — and the
+  binomial stays out of the key, for the reasons above. Two rows print the
+  common name "Sucupira", so those two take the genus: `sucupira-bowdichia`
+  and `sucupira-diplotropis`.
+- **A label is unique only within its table.** Each row carries the `table`
+  it was transcribed from; `handbook_label` alone is not a key.
+
 **That recipe is history, not a contract.** It records how the current ids
 came to exist so a reader can check them against the table. It is not a
 function a consumer may run — and in particular, a later edition that
@@ -62,11 +77,15 @@ meant a thing means that thing or nothing.
 
 ## The other names in the data
 
-`group` (`hardwood` | `softwood`) and `origin` (`us` | `imported`) are
-closed vocabularies, not identifiers: they are part of the published API,
-and adding a member is a minor change while removing one is a breaking
+`group` (`hardwood` | `softwood` | `null`), `origin` (`us` | `imported`),
+`table` (`5-3b` | `5-4b` | `5-5b`) and `sample_origin` (`AF` | `AM` | `AS`)
+are closed vocabularies, not identifiers: they are part of the published
+API, and adding a member is a minor change while removing one is a breaking
 change. `origin` is the Handbook's own split — Table 5-3 covers woods grown
-in the United States, 5-4 and 5-5 cover imports.
+in the United States, 5-4 and 5-5 cover imports. `group` is null on Table
+5-5b rows because that table prints no hardwood/softwood split, and
+`sample_origin` is absent outside 5-5b because no other table prints that
+column.
 
 Property field names carry their unit as a suffix (`_psi`,
 `_million_psi`, `_in_lbf_per_in3`, `_in`, `_lbf`) because inch-pound is
